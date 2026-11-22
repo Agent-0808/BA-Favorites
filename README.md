@@ -26,6 +26,14 @@ npm run preview   # 预览生产构建
 
 构建产物是纯静态文件，可直接部署到 GitHub Pages 等静态托管。`base` 已设置为相对路径，不需要额外配置。
 
+## 部署
+
+仓库包含 `.github/workflows/pages.yml`，推送到 `master` 或手动触发 workflow 时会自动构建并发布到 GitHub Pages。
+
+首次部署前，需要在仓库的 **Settings → Pages → Build and deployment** 中将 **Source** 设为 **GitHub Actions**。
+
+站点地址：<https://agent-0808.github.io/favorite-picker/>
+
 ## 数据
 
 角色数据位于 `public/data/`，构建时会原样复制到 `dist/data/`：
