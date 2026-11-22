@@ -1,0 +1,26 @@
+:root {
+    /* 基础色：BA 风格浅蓝白底 + 深蓝文字 */
+    --color-bg-a: #b9dcf5;
+    --color-bg-b: #e6f3fd;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f2f7fc;
+    --color-border: #d5e2f1;
+    --color-border-strong: #b8cee5;
+    --color-text: #3d4a6b;
+    --color-text-muted: #7c8bab;
+
+    /* BA 专属配色 */
+    --ba-accent: #1287ff;
+    --ba-accent-2: #64c4f0;
+    --ba-accent-deep: #0d6cd0;
+    --ba-navy: #2f4b7c;
+    --ba-band: rgba(28, 44, 80, 0.85);
+    --ba-highlight: #ffe17a;
+    --ba-selected: #ff91ff;
+
+    /* 造型 */
+    --radius-card: 14px;
+    --shadow-card: 0 4px 18px rgba(47, 84, 137, 0.14);
+    --gradient-accent: linear-gradient(135deg, var(--ba-accent) 0%, var(--ba-accent-2) 100%);
+    --tile-width: 120px;
+}
