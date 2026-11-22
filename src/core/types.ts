@@ -52,13 +52,24 @@ export interface BaItem extends PickerItem {
   limited: boolean;
   isInstallCn: boolean;
   isInstallJp: boolean;
+  isInstallGlobal: boolean;
   isNpc: boolean;
   hasCostumes: boolean;
 }
 
+/** 实装范围：不限或只看某个服务器。 */
+export type ServerScope = 'all' | 'jp' | 'cn' | 'global';
+
 /** 页面自定义设置。 */
 export interface BaSettings extends PickerSettings {
-  nonNpcOnly: boolean;
-  jpInstalledOnly: boolean;
-  schools: number[];
+  /** 是否把每个形态（含皮肤）拆成独立 item。 */
+  splitSkins: boolean;
+  includeStudents: boolean;
+  includeNpcs: boolean;
+  /** 空数组表示包含该类别全部学校。 */
+  studentSchools: number[];
+  npcSchools: number[];
+  serverScope: ServerScope;
+  /** 每批卡片数；0 表示自动。 */
+  batchSize: number;
 }

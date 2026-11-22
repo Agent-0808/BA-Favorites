@@ -7,66 +7,126 @@
 </head>
 <body>
     <div class="app">
-        <header class="app-header">
-            <div class="header-left">
+        <!-- 开始页：配置角色范围 -->
+        <section class="start" id="startScreen" hidden>
+            <header class="start-header">
                 <h1>角色喜好排序</h1>
-                <p class="subtitle">从《蔚蓝档案》的角色中选出你最喜欢的排名</p>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-label">已选出</span>
-                    <span class="stat-value" id="statFavorites">0</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">剩余候选</span>
-                    <span class="stat-value" id="statRemaining">0</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">已淘汰</span>
-                    <span class="stat-value" id="statEliminated">0</span>
-                </div>
-            </div>
-        </header>
+                <p class="subtitle">先配置参与排序的角色范围，完成后开始选择</p>
+            </header>
 
-        <section class="controls">
-            <div class="school-filter" id="schoolFilter">
-                <button type="button" class="btn btn--ghost" id="schoolFilterBtn" aria-haspopup="true" aria-expanded="false">
-                    <span>学校</span>
-                    <span class="badge" id="schoolFilterCount"></span>
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="school-dropdown" id="schoolDropdown" hidden></div>
+            <div class="start-body">
+                <section class="start-section">
+                    <div class="section-title">皮肤拆分</div>
+                    <label class="check"><input type="checkbox" id="splitSkins"> 将每个形态（含皮肤）作为独立角色</label>
+                </section>
+
+                <section class="start-section">
+                    <div class="section-title">实装范围</div>
+                    <div class="radio-row">
+                        <label class="check"><input type="radio" name="serverScope" value="all" checked> 不限</label>
+                        <label class="check"><input type="radio" name="serverScope" value="jp"> 仅日服</label>
+                        <label class="check"><input type="radio" name="serverScope" value="cn"> 仅国服</label>
+                        <label class="check"><input type="radio" name="serverScope" value="global"> 仅国际服</label>
+                    </div>
+                </section>
+
+                <section class="start-section">
+                    <div class="section-title">角色范围</div>
+                    <div class="school-groups">
+                        <div class="school-group">
+                            <label class="school-group-head">
+                                <input type="checkbox" id="includeStudents" checked>
+                                <span>学生</span>
+                                <span class="school-group-count" id="studentCount"></span>
+                            </label>
+                            <div class="school-chips" id="studentSchools"></div>
+                        </div>
+                        <div class="school-group">
+                            <label class="school-group-head">
+                                <input type="checkbox" id="includeNpcs" checked>
+                                <span>NPC</span>
+                                <span class="school-group-count" id="npcCount"></span>
+                            </label>
+                            <div class="school-chips" id="npcSchools"></div>
+                        </div>
+                    </div>
+                    <p class="start-hint">学校未勾选时，包含该栏全部学校</p>
+                </section>
+
+                <section class="start-section">
+                    <div class="section-title">每批卡片数</div>
+                    <select class="start-select" id="batchSize"></select>
+                </section>
             </div>
-            <label class="check"><input type="checkbox" id="nonNpcOnly"> 仅非 NPC</label>
-            <label class="check"><input type="checkbox" id="jpInstalledOnly"> 仅日服已实装</label>
-            <button type="button" class="btn btn--ghost" id="resetBtn">重置</button>
+
+            <footer class="start-actions">
+                <div class="start-summary">
+                    <span class="start-count" id="itemCount"></span>
+                    <span id="startSummary"></span>
+                </div>
+                <div class="start-buttons">
+                    <button type="button" class="ba-btn ba-btn--ghost" id="restartBtn" hidden>重新开始</button>
+                    <button type="button" class="ba-btn" id="continueBtn" hidden>继续上次</button>
+                    <button type="button" class="ba-btn ba-btn--accent" id="startBtn">开始排序</button>
+                </div>
+            </footer>
         </section>
 
-        <main class="layout">
-            <section class="picking">
-                <div class="section-title">请选出更喜欢的角色</div>
-                <div class="tile-grid" id="evaluating"></div>
-
-                <div class="progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
+        <!-- 选择页 -->
+        <section class="picker" id="pickerScreen" hidden>
+            <header class="app-header">
+                <div class="header-left">
+                    <h1>角色喜好排序</h1>
+                    <p class="subtitle">从《蔚蓝档案》的角色中选出你最喜欢的排名</p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">已选出</span>
+                        <span class="stat-value" id="statFavorites">0</span>
                     </div>
-                    <p class="progress-text" id="progressText"></p>
+                    <div class="stat">
+                        <span class="stat-label">剩余候选</span>
+                        <span class="stat-value" id="statRemaining">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">已淘汰</span>
+                        <span class="stat-value" id="statEliminated">0</span>
+                    </div>
                 </div>
+            </header>
 
-                <div class="actions">
-                    <button type="button" class="ba-btn ba-btn--accent" id="pickBtn">Pick</button>
-                    <button type="button" class="ba-btn" id="passBtn">Pass</button>
-                    <button type="button" class="ba-btn ba-btn--ghost" id="undoBtn">Undo</button>
-                    <button type="button" class="ba-btn ba-btn--ghost" id="redoBtn">Redo</button>
-                </div>
+            <section class="controls">
+                <span class="scope-summary" id="scopeSummary"></span>
+                <button type="button" class="btn btn--ghost" id="backBtn">返回设置</button>
+                <button type="button" class="btn btn--ghost" id="resetBtn">重置</button>
             </section>
 
-            <aside class="favorites">
-                <div class="section-title">我的最爱</div>
-                <div class="tile-grid tile-grid--small" id="favorites"></div>
-            </aside>
-        </main>
+            <main class="layout">
+                <section class="picking">
+                    <div class="section-title">请选出更喜欢的角色</div>
+                    <div class="tile-grid" id="evaluating"></div>
+
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p class="progress-text" id="progressText"></p>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="ba-btn ba-btn--accent" id="pickBtn">Pick</button>
+                        <button type="button" class="ba-btn" id="passBtn">Pass</button>
+                        <button type="button" class="ba-btn ba-btn--ghost" id="undoBtn">Undo</button>
+                        <button type="button" class="ba-btn ba-btn--ghost" id="redoBtn">Redo</button>
+                    </div>
+                </section>
+
+                <aside class="favorites">
+                    <div class="section-title">我的最爱</div>
+                    <div class="tile-grid tile-grid--small" id="favorites"></div>
+                </aside>
+            </main>
+        </section>
 
         <div class="loading" id="loading">正在加载角色数据…</div>
         <div class="error" id="error" hidden></div>
