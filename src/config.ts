@@ -16,8 +16,8 @@ export const CONFIG: AppConfig = {
   defaultSettings: {
     minBatchSize: 2,
     maxBatchSize: 20,
-    playableOnly: false,
-    cnInstalledOnly: false,
+    nonNpcOnly: true,
+    jpInstalledOnly: false,
     schools: []
   }
 };

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蔚蓝档案 · 角色人气排序</title>
+    <title>蔚蓝档案 · 角色喜好排序</title>
 </head>
 <body>
     <div class="app">
         <header class="app-header">
             <div class="header-left">
-                <h1>角色人气排序</h1>
+                <h1>角色喜好排序</h1>
                 <p class="subtitle">从《蔚蓝档案》的角色中选出你最喜欢的排名</p>
             </div>
             <div class="stats">
@@ -37,8 +37,8 @@
                 </button>
                 <div class="school-dropdown" id="schoolDropdown" hidden></div>
             </div>
-            <label class="check"><input type="checkbox" id="playableOnly"> 仅可玩学生</label>
-            <label class="check"><input type="checkbox" id="cnInstalledOnly"> 仅国服已实装</label>
+            <label class="check"><input type="checkbox" id="nonNpcOnly"> 仅非 NPC</label>
+            <label class="check"><input type="checkbox" id="jpInstalledOnly"> 仅日服已实装</label>
             <button type="button" class="btn btn--ghost" id="resetBtn">重置</button>
         </section>
 
@@ -55,15 +55,15 @@
                 </div>
 
                 <div class="actions">
-                    <button type="button" class="btn btn--primary" id="pickBtn">Pick</button>
-                    <button type="button" class="btn" id="passBtn">Pass</button>
-                    <button type="button" class="btn" id="undoBtn">Undo</button>
-                    <button type="button" class="btn" id="redoBtn">Redo</button>
+                    <button type="button" class="ba-btn ba-btn--accent" id="pickBtn">Pick</button>
+                    <button type="button" class="ba-btn" id="passBtn">Pass</button>
+                    <button type="button" class="ba-btn ba-btn--ghost" id="undoBtn">Undo</button>
+                    <button type="button" class="ba-btn ba-btn--ghost" id="redoBtn">Redo</button>
                 </div>
             </section>
 
             <aside class="favorites">
-                <div class="section-title">已选出的最爱</div>
+                <div class="section-title">我的最爱</div>
                 <div class="tile-grid tile-grid--small" id="favorites"></div>
             </aside>
         </main>
