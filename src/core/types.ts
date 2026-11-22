@@ -51,13 +51,14 @@ export interface BaItem extends PickerItem {
   rarity: number;
   limited: boolean;
   isInstallCn: boolean;
+  isInstallJp: boolean;
   isNpc: boolean;
   hasCostumes: boolean;
 }
 
 /** 页面自定义设置。 */
 export interface BaSettings extends PickerSettings {
-  playableOnly: boolean;
-  cnInstalledOnly: boolean;
+  nonNpcOnly: boolean;
+  jpInstalledOnly: boolean;
   schools: number[];
 }

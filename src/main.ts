@@ -34,16 +34,16 @@ async function boot(): Promise<void> {
             historyLength: CONFIG.historyLength,
             defaultSettings: CONFIG.defaultSettings,
             shouldIncludeItem: (item, settings) => {
-                if (settings.playableOnly && item.isNpc) return false;
-                if (settings.cnInstalledOnly && !item.isInstallCn) return false;
+                if (settings.nonNpcOnly && item.isNpc) return false;
+                if (settings.jpInstalledOnly && !item.isInstallJp) return false;
                 const schoolIds = settings.schools ?? [];
                 if (schoolIds.length > 0 && !schoolIds.includes(item.schoolId)) return false;
                 return true;
             }
         });
 
-        const playableOnly = byId<HTMLInputElement>('playableOnly');
-        const cnInstalledOnly = byId<HTMLInputElement>('cnInstalledOnly');
+        const nonNpcOnly = byId<HTMLInputElement>('nonNpcOnly');
+        const jpInstalledOnly = byId<HTMLInputElement>('jpInstalledOnly');
 
         let view: PickerView;
 
@@ -53,8 +53,8 @@ async function boot(): Promise<void> {
         }
 
         function syncControls(settings: BaSettings): void {
-            playableOnly.checked = Boolean(settings.playableOnly);
-            cnInstalledOnly.checked = Boolean(settings.cnInstalledOnly);
+            nonNpcOnly.checked = Boolean(settings.nonNpcOnly);
+            jpInstalledOnly.checked = Boolean(settings.jpInstalledOnly);
             filter.setSelected(settings.schools ?? []);
         }
 
@@ -68,12 +68,12 @@ async function boot(): Promise<void> {
             onChange: schoolIds => applySettings({ schools: schoolIds })
         });
 
-        playableOnly.addEventListener('change', () => {
-            applySettings({ playableOnly: playableOnly.checked });
+        nonNpcOnly.addEventListener('change', () => {
+            applySettings({ nonNpcOnly: nonNpcOnly.checked });
         });
 
-        cnInstalledOnly.addEventListener('change', () => {
-            applySettings({ cnInstalledOnly: cnInstalledOnly.checked });
+        jpInstalledOnly.addEventListener('change', () => {
+            applySettings({ jpInstalledOnly: jpInstalledOnly.checked });
         });
 
         byId<HTMLButtonElement>('resetBtn').addEventListener('click', () => {

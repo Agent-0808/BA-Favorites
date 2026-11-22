@@ -81,11 +81,11 @@ export class PickerView {
     private initSortable(): void {
         Sortable.create(this.elements.favorites, {
             animation: 120,
-            draggable: '.tile',
+            draggable: '.fav-item',
             ghostClass: 'dragging',
             onEnd: () => {
-                const ids = [...this.elements.favorites.querySelectorAll<HTMLElement>('.tile')]
-                    .map(tile => tile.dataset.id)
+                const ids = [...this.elements.favorites.querySelectorAll<HTMLElement>('.fav-item')]
+                    .map(node => node.dataset.id)
                     .filter((id): id is string => Boolean(id));
                 this.picker.setFavorites(ids);
                 this.update();
@@ -119,12 +119,31 @@ export class PickerView {
         container.innerHTML = '';
 
         items.forEach((item, index) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'fav-item';
+            wrapper.dataset.id = item.id;
+
             const tile = this.createTile(item, false);
+
+            // 半透明条带：粉色爱心 + 排名
+            const love = document.createElement('span');
+            love.className = 'tile-love';
+            const heart = document.createElement('span');
+            heart.className = 'heart';
+            heart.textContent = '♥';
+            heart.setAttribute('aria-hidden', 'true');
             const rank = document.createElement('span');
-            rank.className = 'tile-rank';
             rank.textContent = String(index + 1);
-            tile.append(rank);
-            container.append(tile);
+            love.append(heart, rank);
+            tile.append(love);
+
+            const name = document.createElement('span');
+            name.className = 'fav-name';
+            name.textContent = item.name;
+            name.title = item.name;
+
+            wrapper.append(tile, name);
+            container.append(wrapper);
         });
     }
 
@@ -140,13 +159,15 @@ export class PickerView {
         image.loading = 'lazy';
         image.draggable = false;
 
-        const name = document.createElement('span');
-        name.className = 'tile-name';
-        name.textContent = item.name;
-
-        tile.append(image, name);
+        tile.append(image);
 
         if (selectable) {
+            // 候选瓦片在图片底部显示名称；最爱瓦片的名称在图片外
+            const name = document.createElement('span');
+            name.className = 'tile-name';
+            name.textContent = item.name;
+            tile.append(name);
+
             tile.addEventListener('click', () => {
                 if (this.selected.has(item.id)) {
                     this.selected.delete(item.id);

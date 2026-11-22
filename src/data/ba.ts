@@ -5,6 +5,7 @@ export interface StudentPage {
   page_id: number;
   skin: string;
   avatar: string;
+  is_install: boolean;
   is_install_cn: boolean;
   rarity: number;
   limited: boolean;
@@ -69,12 +70,14 @@ export function toItems(students: Student[], schools: School[]): BaItem[] {
     let rarity = 0;
     let limited = false;
     let isInstallCn = false;
+    let isInstallJp = false;
     let hasCostumes = false;
 
     for (const page of pages) {
       rarity = Math.max(rarity, page.rarity ?? 0);
       limited ||= Boolean(page.limited);
       isInstallCn ||= Boolean(page.is_install_cn);
+      isInstallJp ||= Boolean(page.is_install);
       hasCostumes ||= Boolean(page.skin);
     }
 
@@ -87,6 +90,7 @@ export function toItems(students: Student[], schools: School[]): BaItem[] {
       rarity,
       limited,
       isInstallCn,
+      isInstallJp,
       isNpc: Boolean(student.is_npc),
       hasCostumes
     });

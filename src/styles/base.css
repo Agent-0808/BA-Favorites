@@ -51,28 +51,45 @@ body {
 
 .stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
+/* 双层数值牌：上层白色底标签、下层深蓝数值带；整体斜切，描边与下层同色 */
 .stat {
-    min-width: 78px;
-    padding: 6px 14px;
+    min-width: 96px;
+    overflow: hidden;
     text-align: center;
-    color: #ffffff;
-    background: linear-gradient(180deg, #2f5b93 0%, #24406b 100%);
-    border-radius: 8px;
+    background: var(--color-surface);
+    border: 2px solid var(--ba-navy);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(47, 84, 137, 0.14);
+    transform: skewX(-6deg);
+}
+
+/* 反向斜切让文字正视；加宽覆盖斜切后两侧空隙 */
+.stat-label,
+.stat-value {
+    display: block;
+    width: 120%;
+    margin-left: -10%;
+    transform: skewX(6deg);
 }
 
 .stat-label {
-    display: block;
-    font-size: 11px;
-    opacity: 0.85;
+    padding: 4px 12px 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c5d9c;
 }
 
 .stat-value {
-    display: block;
-    font-size: 18px;
+    padding: 3px 12px 5px;
+    font-size: 16px;
     font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: #ffffff;
+    background: var(--ba-navy);
 }
 
 .controls {

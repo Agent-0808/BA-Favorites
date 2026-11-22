@@ -35,6 +35,79 @@
     border-color: var(--color-border);
 }
 
+/* ---------- BA 风格斜切填充按钮 ----------
+   用伪元素做斜切圆角背景，文字保持水平，宽度自适应 */
+
+.ba-btn {
+    position: relative;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    isolation: isolate;
+    transition: color 0.15s;
+}
+
+.ba-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--gradient-accent);
+    border-radius: 10px;
+    /* 游戏风格：平行四边形 + 圆角，底部一条深色实边 */
+    transform: skewX(-10deg);
+    box-shadow: 0 2px 0 var(--ba-accent-deep);
+    transition: filter 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.ba-btn:hover::before {
+    filter: brightness(1.08);
+}
+
+.ba-btn:active::before {
+    transform: skewX(-10deg) translateY(2px);
+    box-shadow: none;
+}
+
+/* 次按钮：白底蓝描边 */
+.ba-btn--ghost {
+    color: var(--ba-accent-deep);
+}
+
+.ba-btn--ghost::before {
+    background: var(--color-surface);
+    border: 1.5px solid var(--ba-accent);
+    box-shadow: none;
+}
+
+.ba-btn--ghost:hover::before {
+    background: var(--color-surface-alt);
+    filter: none;
+}
+
+/* 强调按钮：黄色填充 */
+.ba-btn--accent {
+    color: #6a4a00;
+}
+
+.ba-btn--accent::before {
+    background: linear-gradient(135deg, #ffe27a, #ffcc33);
+    box-shadow: 0 2px 0 #d9a300;
+}
+
+.ba-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .badge {
     display: inline-block;
     min-width: 18px;
@@ -198,22 +271,52 @@
     transform-origin: bottom center;
 }
 
-.tile-grid--small .tile-name {
-    padding: 3px 4px;
-    font-size: 10px;
+/* ---------- 我的最爱 ---------- */
+
+.fav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: var(--tile-width);
 }
 
-.tile-rank {
+/* 半透明条带：粉色爱心 + 排名 */
+.tile-love {
     position: absolute;
-    top: 4px;
-    left: 6px;
-    z-index: 2;
-    padding: 1px 6px;
-    font-size: 11px;
-    color: var(--ba-highlight);
-    background: rgba(28, 44, 80, 0.75);
-    border-radius: 4px;
-    transform: skewX(6deg);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 6px 2px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #ffffff;
+    background: var(--ba-band);
+    transform: skewX(6deg) scale(1.14);
+    transform-origin: bottom center;
+}
+
+.tile-love .heart {
+    font-size: 14px;
+    line-height: 1;
+    color: #ff7fb6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* 图片外的名称 */
+.fav-name {
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ba-navy);
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .tile-notice {
@@ -267,7 +370,7 @@
 
 /* ---------- 已选列表拖拽 ---------- */
 
-.tile.dragging {
+.fav-item.dragging {
     opacity: 0.35;
 }
 
@@ -278,6 +381,10 @@
 
     .tile-grid--small {
         --tile-width: 76px;
+    }
+
+    .fav-name {
+        font-size: 12px;
     }
 
     .progress-text {

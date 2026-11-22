@@ -1,13 +1,13 @@
-# BA 角色人气排序
+# BA 角色喜好排序
 
-基于 [Favorite Picker](https://github.com/ndrwh/favorite-picker) 改造的《蔚蓝档案》角色人气排序工具。通过反复从一批角色中选出更喜欢的角色，逐轮淘汰，最终得到完整的人气排名。
+基于 [Favorite Picker](https://github.com/ndrwh/favorite-picker) 改造的《蔚蓝档案》角色喜好排序工具。通过反复从一批角色中选出更喜欢的角色，逐轮淘汰，最终得到完整的喜好排名。
 
 角色数据来自 [BA-characters-internal-id](https://github.com/Agent-0808/BA-characters-internal-id)，以外置 JSON 的形式加载，名称使用 `family_name` / `given_name` 的 kivo 译名。
 
 ## 功能
 
 - 347 个角色（含 NPC），按角色粒度参与排序
-- 学校多选、仅可玩学生、仅国服已实装三种筛选条件
+- 学校多选、仅非 NPC、仅日服已实装三种筛选条件
 - BA 风格斜切卡片：固定尺寸头像、底部半透明名称条、悬停与选中高亮
 - 进度条显示已筛选 / 总候选、剩余候选，以及预计还需多少次选择
 - 已选列表显示排名，支持拖拽排序
