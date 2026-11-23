@@ -1,6 +1,7 @@
 import type { BaItem, BaSettings, ServerScope } from '../core/types';
 import { CONFIG } from '../config';
 import { matchesBaScope, type SchoolGroups, type SchoolOption } from '../data/ba';
+import { getSchoolColor } from '../utils/schoolColors';
 
 export type StartMode = 'fresh' | 'continue';
 
@@ -40,6 +41,8 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   const itemCount = byId('itemCount');
   const includeStudents = byId<HTMLInputElement>('includeStudents');
   const includeNpcs = byId<HTMLInputElement>('includeNpcs');
+  const clearStudentSchools = byId<HTMLButtonElement>('clearStudentSchools');
+  const clearNpcSchools = byId<HTMLButtonElement>('clearNpcSchools');
   const studentSchoolsEl = byId('studentSchools');
   const npcSchoolsEl = byId('npcSchools');
   const studentCount = byId('studentCount');
@@ -95,6 +98,11 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
     for (const school of schools) {
       const chip = document.createElement('label');
       chip.className = 'school-chip';
+
+      // 学校配色由 schoolColors.ts 提供，写入 CSS 变量供样式使用
+      const color = getSchoolColor(school.id);
+      chip.style.setProperty('--school-bg', color.bg);
+      chip.style.setProperty('--school-text', color.text);
 
       const input = document.createElement('input');
       input.type = 'checkbox';
@@ -176,6 +184,17 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
 
   includeNpcs.addEventListener('change', () => {
     draft.includeNpcs = includeNpcs.checked;
+    rebuild();
+  });
+
+  // 只清空学校勾选，不改动学生 / NPC 的总开关
+  clearStudentSchools.addEventListener('click', () => {
+    draft.studentSchools = [];
+    rebuild();
+  });
+
+  clearNpcSchools.addEventListener('click', () => {
+    draft.npcSchools = [];
     rebuild();
   });
 

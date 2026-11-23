@@ -11,9 +11,17 @@
 body {
     min-height: 100vh;
     padding: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Microsoft YaHei", Arial, sans-serif;
+    font-family: var(--font-family-base);
     color: var(--color-text);
     background: linear-gradient(135deg, var(--color-bg-a) 0%, var(--color-bg-b) 100%);
+}
+
+/* 表单控件默认不继承字体，统一跟随正文字体 */
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
 
 .app {
@@ -22,7 +30,7 @@ body {
     min-height: calc(100vh - 30px);
     margin: 0 auto;
     background: var(--color-surface);
-    border-radius: var(--radius-card);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-card);
     overflow: hidden;
 }
@@ -34,13 +42,17 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 18px 24px;
-    background: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
+    /* BA 风格浅蓝渐变 header */
+    background: linear-gradient(180deg, var(--ba-header-a) 0%, var(--ba-header-b) 100%);
     border-bottom: 1px solid var(--color-border);
 }
 
 .app-header h1 {
-    font-size: 20px;
-    color: var(--ba-navy);
+    width: fit-content;
+    padding-bottom: 3px;
+    font-size: 1.15rem;
+    color: var(--ba-title);
+    border-bottom: 3px solid var(--ba-highlight);
 }
 
 .subtitle {
@@ -57,14 +69,14 @@ body {
 
 /* 双层数值牌：上层白色底标签、下层深蓝数值带；整体斜切，描边与下层同色 */
 .stat {
-    min-width: 96px;
+    min-width: 112px;
     overflow: hidden;
     text-align: center;
     background: var(--color-surface);
     border: 2px solid var(--ba-navy);
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     box-shadow: 0 2px 8px rgba(47, 84, 137, 0.14);
-    transform: skewX(-6deg);
+    transform: skewX(var(--ba-skew));
 }
 
 /* 反向斜切让文字正视；加宽覆盖斜切后两侧空隙 */
@@ -73,14 +85,14 @@ body {
     display: block;
     width: 120%;
     margin-left: -10%;
-    transform: skewX(6deg);
+    transform: skewX(var(--ba-skew-back));
 }
 
 .stat-label {
     padding: 4px 12px 2px;
     font-size: 12px;
     font-weight: 700;
-    color: #2c5d9c;
+    color: var(--ba-th-text);
 }
 
 .stat-value {
@@ -98,7 +110,7 @@ body {
     gap: 12px;
     align-items: center;
     padding: 12px 24px;
-    background: var(--color-surface-alt);
+    background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -109,15 +121,16 @@ body {
     padding: 20px 24px 28px;
 }
 
+/* 区块标题色带：深蓝、右端斜切收尾 */
 .section-title {
     margin-bottom: 14px;
-    padding: 6px 14px;
+    padding: 5px 14px;
     font-size: 13px;
     font-weight: 700;
     color: #ffffff;
     background: linear-gradient(90deg, #24406b 0%, #2f5b93 100%);
-    border-radius: 5px 0 0 5px;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%);
 }
 
 .favorites {
