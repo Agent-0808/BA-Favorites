@@ -166,6 +166,8 @@ async function boot(): Promise<void> {
             updateScopeSummary();
             startScreen.hide();
             byId('pickerScreen').hidden = false;
+            // 初始渲染发生在选择页隐藏时，显示后重绘一次，让长名称按实际宽度缩小字号
+            view.update();
         }
 
         const startScreen = createStartScreen(byId('startScreen'), {

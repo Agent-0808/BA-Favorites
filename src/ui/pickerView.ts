@@ -47,6 +47,28 @@ export class PickerView {
         this.renderFavorites(favorites);
         this.renderProgress(state, evaluating.length, favorites.length);
         this.updateButtons(evaluating.length);
+        this.fitNames();
+    }
+
+    /**
+     * 名称单行自适应：字号从默认值逐级缩小到 9px，
+     * 仍放不下则由 CSS 的 text-overflow 省略号截断。
+     */
+    private fitNames(): void {
+        const MIN_FONT_SIZE = 9;
+        const names = [
+            ...this.elements.evaluating.querySelectorAll<HTMLElement>('.tile-name'),
+            ...this.elements.favorites.querySelectorAll<HTMLElement>('.fav-name')
+        ];
+        for (const el of names) {
+            // 每次重绘先恢复默认字号，避免沿用上一次的缩小结果
+            el.style.fontSize = '';
+            let size = parseFloat(getComputedStyle(el).fontSize);
+            while (el.scrollWidth > el.clientWidth && size > MIN_FONT_SIZE) {
+                size -= 1;
+                el.style.fontSize = `${size}px`;
+            }
+        }
     }
 
     private bindEvents(): void {
