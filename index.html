@@ -34,19 +34,25 @@
                     <div class="section-title">角色范围</div>
                     <div class="school-groups">
                         <div class="school-group">
-                            <label class="school-group-head">
-                                <input type="checkbox" id="includeStudents" checked>
-                                <span>学生</span>
-                                <span class="school-group-count" id="studentCount"></span>
-                            </label>
+                            <div class="school-group-head">
+                                <label class="school-group-toggle">
+                                    <input type="checkbox" id="includeStudents" checked>
+                                    <span>学生</span>
+                                    <span class="school-group-count" id="studentCount"></span>
+                                </label>
+                                <button type="button" class="school-clear" id="clearStudentSchools">取消选择</button>
+                            </div>
                             <div class="school-chips" id="studentSchools"></div>
                         </div>
                         <div class="school-group">
-                            <label class="school-group-head">
-                                <input type="checkbox" id="includeNpcs" checked>
-                                <span>NPC</span>
-                                <span class="school-group-count" id="npcCount"></span>
-                            </label>
+                            <div class="school-group-head">
+                                <label class="school-group-toggle">
+                                    <input type="checkbox" id="includeNpcs" checked>
+                                    <span>NPC</span>
+                                    <span class="school-group-count" id="npcCount"></span>
+                                </label>
+                                <button type="button" class="school-clear" id="clearNpcSchools">取消选择</button>
+                            </div>
                             <div class="school-chips" id="npcSchools"></div>
                         </div>
                     </div>
@@ -55,7 +61,9 @@
 
                 <section class="start-section">
                     <div class="section-title">每批卡片数</div>
-                    <select class="start-select" id="batchSize"></select>
+                    <span class="select-shell">
+                        <select id="batchSize"></select>
+                    </span>
                 </section>
             </div>
 
@@ -97,8 +105,8 @@
 
             <section class="controls">
                 <span class="scope-summary" id="scopeSummary"></span>
-                <button type="button" class="btn btn--ghost" id="backBtn">返回设置</button>
-                <button type="button" class="btn btn--ghost" id="resetBtn">重置</button>
+                <button type="button" class="ba-btn ba-btn--gray" id="backBtn">返回设置</button>
+                <button type="button" class="ba-btn ba-btn--gray" id="resetBtn">重置</button>
             </section>
 
             <main class="layout">

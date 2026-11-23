@@ -1,0 +1,122 @@
+/* ===== BA 风格斜切填充按钮 =====
+   用伪元素做斜切圆角背景，文字保持水平，无需反向斜切子元素。 */
+
+.ba-btn {
+    /* 底板配色，修饰符只需覆盖这两个变量 */
+    --btn-bg: var(--ba-btn-blue);
+    --btn-edge: var(--ba-btn-blue-edge);
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 24px;
+    border: none;
+    background: none;
+    color: var(--ba-btn-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    isolation: isolate;
+    transition: transform 0.2s ease;
+}
+
+.ba-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--btn-bg);
+    /* 两角对角线渐变，还原游戏按钮的高光 */
+    background-image:
+        linear-gradient(to bottom right, var(--btn-edge) 0%, transparent 50%),
+        linear-gradient(to top left, var(--btn-edge) 0%, transparent 50%);
+    border-radius: var(--radius-btn);
+    box-shadow: var(--ba-btn-shadow);
+    transform: skewX(var(--ba-skew));
+    transition: box-shadow 0.2s ease;
+}
+
+.ba-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* 按下时整体轻微缩小 */
+.ba-btn:active {
+    transform: scale(0.95);
+}
+
+.ba-btn:focus-visible {
+    outline: none;
+}
+
+.ba-btn:focus-visible::before {
+    box-shadow: 0 0 0 3px rgba(18, 135, 255, 0.35), var(--ba-btn-shadow);
+}
+
+.ba-btn:disabled,
+.ba-btn.is-disabled {
+    --btn-bg: var(--ba-btn-gray);
+    --btn-edge: var(--ba-btn-gray-edge);
+    cursor: not-allowed;
+}
+
+.ba-btn:disabled:hover,
+.ba-btn:disabled:active,
+.ba-btn.is-disabled:hover,
+.ba-btn.is-disabled:active {
+    transform: none;
+}
+
+/* 黄色按钮：特殊操作 */
+.ba-btn--yellow,
+.ba-btn--accent {
+    --btn-bg: var(--ba-btn-yellow);
+    --btn-edge: var(--ba-btn-yellow-edge);
+}
+
+/* 灰色按钮：未选中的 tab、取消类操作 */
+.ba-btn--gray {
+    --btn-bg: var(--ba-btn-gray);
+    --btn-edge: var(--ba-btn-gray-edge);
+}
+
+/* 次按钮：白底蓝描边 */
+.ba-btn--ghost {
+    --btn-bg: var(--color-surface);
+    --btn-edge: transparent;
+    color: var(--ba-accent-deep);
+}
+
+.ba-btn--ghost::before {
+    border: 1.5px solid var(--ba-accent);
+    box-shadow: none;
+}
+
+.ba-btn--ghost:hover::before {
+    background-color: var(--ba-row-hover);
+}
+
+/* 方形图标按钮 */
+.ba-btn--icon {
+    width: 42px;
+    padding: 0;
+}
+
+/* 导航 tab：比普通按钮矮一些 */
+.ba-btn--tab {
+    height: 36px;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .ba-btn--tab {
+        height: 32px;
+        padding: 0 12px;
+        font-size: 0.78rem;
+    }
+}

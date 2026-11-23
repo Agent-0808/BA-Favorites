@@ -9,13 +9,16 @@
 
 .start-header {
     padding: 18px 24px;
-    background: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--ba-header-a) 0%, var(--ba-header-b) 100%);
     border-bottom: 1px solid var(--color-border);
 }
 
 .start-header h1 {
-    font-size: 20px;
-    color: var(--ba-navy);
+    width: fit-content;
+    padding-bottom: 3px;
+    font-size: 1.15rem;
+    color: var(--ba-title);
+    border-bottom: 3px solid var(--ba-highlight);
 }
 
 .start-body {
@@ -42,14 +45,55 @@
     gap: 14px;
 }
 
-.start-select {
-    padding: 6px 10px;
-    font-family: inherit;
-    font-size: 13px;
-    color: var(--ba-navy);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border-strong);
-    border-radius: 8px;
+/* 下拉框：蓝色斜切底板 + 深蓝粗体文字（与按钮同款造型） */
+.select-shell {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 38px;
+    isolation: isolate;
+}
+
+.select-shell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--ba-btn-blue);
+    background-image:
+        linear-gradient(to bottom right, var(--ba-btn-blue-edge) 0%, transparent 50%),
+        linear-gradient(to top left, var(--ba-btn-blue-edge) 0%, transparent 50%);
+    border-radius: var(--radius-btn);
+    box-shadow: var(--ba-btn-shadow);
+    transform: skewX(var(--ba-skew));
+}
+
+/* 自绘下拉箭头，替代各浏览器不一致的原生箭头 */
+.select-shell::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--ba-btn-text);
+    pointer-events: none;
+}
+
+.select-shell select {
+    appearance: none;
+    height: 100%;
+    padding: 0 32px 0 16px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ba-btn-text);
+    cursor: pointer;
+}
+
+.select-shell select:focus {
+    outline: none;
 }
 
 /* ---------- 学生 / NPC 学校分栏 ---------- */
@@ -64,22 +108,43 @@
     padding: 10px 12px;
     background: var(--color-surface-alt);
     border: 1px solid var(--color-border);
-    border-radius: 10px;
+    border-radius: var(--radius-md);
 }
 
 .school-group-head {
     display: flex;
     gap: 8px;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 8px;
+}
+
+.school-group-toggle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     font-size: 13px;
     font-weight: 700;
     color: var(--ba-navy);
     cursor: pointer;
 }
 
+/* 右对齐的取消选择：清空该类的全部学校勾选 */
+.school-clear {
+    padding: 0;
+    font-size: 12px;
+    color: var(--color-accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.school-clear:hover {
+    text-decoration: underline;
+}
+
 .school-group-head input {
-    accent-color: var(--ba-accent);
+    accent-color: var(--color-accent);
 }
 
 .school-group-count {
@@ -98,6 +163,7 @@
     pointer-events: none;
 }
 
+/* 学校标签：默认中性色；选中后才使用 schoolColors.ts 写入的 --school-bg / --school-text */
 .school-chip {
     display: inline-flex;
     gap: 6px;
@@ -107,13 +173,13 @@
     color: var(--ba-navy);
     cursor: pointer;
     background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    transform: skewX(-8deg);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    transform: skewX(var(--ba-skew));
 }
 
 .school-chip > * {
-    transform: skewX(8deg);
+    transform: skewX(var(--ba-skew-back));
 }
 
 .school-chip img {
@@ -122,14 +188,15 @@
     object-fit: contain;
 }
 
+/* 选中态：整块换成该学校的配色 */
 .school-chip:has(input:checked) {
-    color: var(--ba-accent-deep);
-    background: #e8f3fd;
-    border-color: var(--ba-accent);
+    color: var(--school-text, var(--ba-navy));
+    background: var(--school-bg, var(--color-surface));
+    border-color: currentColor;
 }
 
 .school-chip input {
-    accent-color: var(--ba-accent);
+    accent-color: var(--color-accent);
 }
 
 /* ---------- 底部操作区 ---------- */
@@ -140,7 +207,7 @@
     gap: 14px;
     align-items: center;
     padding: 16px 24px;
-    background: var(--color-surface-alt);
+    background: var(--color-bg);
     border-top: 1px solid var(--color-border);
 }
 

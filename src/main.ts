@@ -1,5 +1,6 @@
 import './styles/tokens.css';
 import './styles/base.css';
+import './styles/buttons.css';
 import './styles/components.css';
 import './styles/start.css';
 

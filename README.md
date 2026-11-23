@@ -2,7 +2,7 @@
 
 基于 [Favorite Picker](https://github.com/antialiasis/favorite-picker) 改造的《蔚蓝档案》角色喜好排序工具。通过反复从一批角色中选出更喜欢的角色，逐轮淘汰，最终得到完整的喜好排名。
 
-角色数据来自 [BA-characters-internal-id](https://github.com/Agent-0808/BA-characters-internal-id)，以外置 JSON 的形式加载，名称使用 `family_name` / `given_name` 的 kivo 译名。
+角色数据来自 [BA-characters-internal-id](https://github.com/Agent-0808/BA-characters-internal-id)，以外置 JSON 的形式加载。
 
 ## 功能
 
@@ -78,5 +78,6 @@ legacy/                  旧版 JavaScript 实现，仅供对照，不参与构�
 
 ## 致谢
 
-- [Favorite Picker](https://github.com/ndrwh/favorite-picker)：原始排序算法与交互设计
+- [Favorite Picker](https://github.com/antialiasis/favorite-picker)：原始排序算法与交互设计
 - [BA-characters-internal-id](https://github.com/Agent-0808/BA-characters-internal-id)：角色与学校数据
+  - [基沃托斯古书馆](kivo.wiki)：上游数据源
