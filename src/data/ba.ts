@@ -135,7 +135,7 @@ export function toItems(students: Student[], schools: School[], splitSkins = fal
       for (const page of pages) {
         // 没有任何头像的页无法在界面中展示。
         if (!page.avatar) continue;
-        const name = page.skin ? `${studentName(student)}（${page.skin}）` : studentName(student);
+        const name = page.skin ? `${studentName(student)}(${page.skin})` : studentName(student);
         items.push(buildItem(student, page, schoolNames, `p${page.page_id}`, name, pageFlags(page), Boolean(page.skin)));
       }
       continue;
