@@ -4,12 +4,25 @@ import './styles/buttons.css';
 import './styles/components.css';
 import './styles/start.css';
 
-import { CONFIG } from './config';
+import { BAClickFX } from 'ba-click-fx';
+import { CLICK_FX_CONFIG, CONFIG } from './config';
 import { Picker } from './core/picker';
 import type { BaItem, BaSettings } from './core/types';
 import { fetchJson, matchesBaScope, toItems, toSchoolGroups, type School, type SchoolGroups, type Student } from './data/ba';
 import { PickerView } from './ui/pickerView';
 import { createStartScreen, type StartResult } from './ui/startScreen';
+
+// 蔚蓝档案点击特效：暂无设置页，直接使用默认配置
+if (CLICK_FX_CONFIG.enabled) {
+    new BAClickFX({
+        themeColor: CLICK_FX_CONFIG.themeColor,
+        clickEnabled: CLICK_FX_CONFIG.clickEnabled,
+        trailEnabled: CLICK_FX_CONFIG.trailEnabled,
+        trailAlways: CLICK_FX_CONFIG.trailAlways,
+        opacity: CLICK_FX_CONFIG.opacity,
+        scale: CLICK_FX_CONFIG.scale
+    });
+}
 
 function byId<T extends HTMLElement>(id: string): T {
     const element = document.getElementById(id);
