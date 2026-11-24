@@ -155,6 +155,20 @@ function scopeSummary(items: BaItem[], settings: BaSettings): string {
     return `当前范围：学生 ${students} · NPC ${filtered.length - students} · 共 ${filtered.length} 项`;
 }
 
+/** 「关于」弹窗：开始页与选择页共用，点击关闭按钮或遮罩关闭。 */
+function setupAboutDialog(): void {
+    const dialog = byId<HTMLDialogElement>('aboutDialog');
+    for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-open-about]')) {
+        btn.addEventListener('click', () => dialog.showModal());
+    }
+    for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-close-about]')) {
+        btn.addEventListener('click', () => dialog.close());
+    }
+    dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+    });
+}
+
 async function boot(): Promise<void> {
     const loading = byId('loading');
     const error = byId('error');
@@ -250,4 +264,5 @@ async function boot(): Promise<void> {
     }
 }
 
+setupAboutDialog();
 void boot();
