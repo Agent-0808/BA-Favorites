@@ -59,8 +59,10 @@
 
 .ba-btn:disabled,
 .ba-btn.is-disabled {
-    --btn-bg: var(--ba-btn-gray);
-    --btn-edge: var(--ba-btn-gray-edge);
+    --btn-bg: var(--ba-btn-disabled-bg);
+    /* 去掉两角高光，禁用态保持平涂灰底 */
+    --btn-edge: transparent;
+    color: var(--ba-btn-disabled-text);
     cursor: not-allowed;
 }
 
@@ -98,6 +100,20 @@
 
 .ba-btn--ghost:hover::before {
     background-color: var(--ba-row-hover);
+}
+
+/* 禁用时不再使用蓝描边与悬停底色 */
+.ba-btn--ghost:disabled::before,
+.ba-btn--ghost.is-disabled::before {
+    border-color: var(--color-border-strong);
+    background-color: transparent;
+}
+
+/* 小号按钮：存档卡片等区域的次要操作 */
+.ba-btn--sm {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 0.8rem;
 }
 
 /* 方形图标按钮 */

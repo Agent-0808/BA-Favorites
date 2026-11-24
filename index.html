@@ -67,15 +67,42 @@
                 </section>
             </div>
 
+            <section class="save-panel" id="savePanel" hidden>
+                <div class="save-card">
+                    <div class="save-head">
+                        <div class="save-head-left">
+                            <span class="save-title">上次进度</span>
+                            <span class="save-mode" id="saveMode">普通</span>
+                        </div>
+                        <span class="save-time" id="saveTime"></span>
+                    </div>
+                    <div class="save-metrics">
+                        <span class="save-metric"><strong id="saveFavorites">0</strong>已选出</span>
+                        <span class="save-metric"><strong id="saveRemaining">0</strong>剩余候选</span>
+                        <span class="save-metric"><strong id="saveEliminated">0</strong>已淘汰</span>
+                    </div>
+                    <p class="save-config" id="saveConfig"></p>
+                    <p class="save-diff" id="saveDiff" hidden>
+                        当前配置与存档不同，载入存档配置后才能继续
+                        <button type="button" class="ba-btn ba-btn--ghost ba-btn--sm" id="restoreSaveBtn">载入存档配置</button>
+                    </p>
+                    <div class="save-actions">
+                        <button type="button" class="ba-btn" id="continueBtn">继续上次</button>
+                        <button type="button" class="ba-btn ba-btn--gray ba-btn--sm" id="deleteSaveBtn">删除存档</button>
+                    </div>
+                </div>
+                <p class="save-other" id="saveOther" hidden>
+                    另一模式（<span id="saveOtherMode">普通</span>）也有一份存档
+                    <button type="button" class="save-link" id="switchModeBtn">切换查看</button>
+                </p>
+            </section>
+
             <footer class="start-actions">
                 <div class="start-summary">
                     <span class="start-count" id="itemCount"></span>
-                    <span id="startSummary"></span>
                 </div>
                 <div class="start-buttons">
-                    <button type="button" class="ba-btn ba-btn--ghost" id="restartBtn" hidden>重新开始</button>
-                    <button type="button" class="ba-btn" id="continueBtn" hidden>继续上次</button>
-                    <button type="button" class="ba-btn ba-btn--accent" id="startBtn">开始排序</button>
+                    <button type="button" class="ba-btn ba-btn--accent" id="startBtn">开始</button>
                 </div>
             </footer>
         </section>

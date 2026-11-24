@@ -10,7 +10,7 @@ import { Picker } from './core/picker';
 import type { BaItem, BaSettings } from './core/types';
 import { fetchJson, matchesBaScope, toItems, toSchoolGroups, type School, type SchoolGroups, type Student } from './data/ba';
 import { PickerView } from './ui/pickerView';
-import { createStartScreen, type StartResult } from './ui/startScreen';
+import { createStartScreen, type SaveSummary, type StartResult } from './ui/startScreen';
 
 // 蔚蓝档案点击特效：暂无设置页，直接使用默认配置
 if (CLICK_FX_CONFIG.enabled) {
@@ -36,11 +36,14 @@ function storageKey(splitSkins: boolean): string {
 }
 
 interface SavedStateLike {
+    eliminated?: unknown;
     favorites?: unknown;
     current?: unknown;
     survived?: unknown;
     evaluating?: unknown;
     settings?: Record<string, unknown>;
+    /** 最近一次写入存档的时间戳；旧存档可能没有。 */
+    savedAt?: unknown;
 }
 
 function readSavedState(splitSkins: boolean): SavedStateLike | null {
@@ -79,14 +82,62 @@ function initialSettings(splitSkins: boolean): BaSettings {
     };
 }
 
-function getSaveSummary(splitSkins: boolean): string | null {
+const SERVER_SCOPE_LABELS: Record<BaSettings['serverScope'], string> = {
+    all: '不限',
+    jp: '仅日服',
+    global: '仅国际服',
+    cn: '仅国服'
+};
+
+/** 把设置压缩成一行存档摘要，用于开始页的存档卡片。 */
+function describeSettings(settings: BaSettings): string {
+    const scope = (enabled: boolean, ids: number[], label: string): string => {
+        if (!enabled) return `不含${label}`;
+        return ids.length === 0 ? `${label}全部` : `${label} ${ids.length} 所`;
+    };
+    return [
+        SERVER_SCOPE_LABELS[settings.serverScope],
+        scope(settings.includeStudents, settings.studentSchools, '学生'),
+        scope(settings.includeNpcs, settings.npcSchools, 'NPC'),
+        settings.batchSize > 0 ? `每批 ${settings.batchSize} 张` : '每批自动'
+    ].join(' · ');
+}
+
+/** 距今多久；超过一周直接显示日期。 */
+function formatRelativeTime(timestamp: number): string {
+    const diff = Math.max(0, Date.now() - timestamp);
+    const minute = 60_000;
+    const hour = 60 * minute;
+    const day = 24 * hour;
+    if (diff < minute) return '刚刚';
+    if (diff < hour) return `${Math.floor(diff / minute)} 分钟前`;
+    if (diff < day) return `${Math.floor(diff / hour)} 小时前`;
+    if (diff < 7 * day) return `${Math.floor(diff / day)} 天前`;
+    return new Date(timestamp).toLocaleDateString('zh-CN');
+}
+
+function getSaveSummary(splitSkins: boolean): SaveSummary | null {
     const saved = readSavedState(splitSkins);
     if (!saved) return null;
 
     const count = (value: unknown): number => (Array.isArray(value) ? value.length : 0);
     const favorites = count(saved.favorites);
-    const remaining = count(saved.current) + count(saved.survived) + count(saved.evaluating);
-    return `上次进度：已选出 ${favorites} · 剩余 ${remaining} 项`;
+    const survived = count(saved.survived);
+    const eliminated = count(saved.eliminated);
+
+    // 只是打开过选择页、还没做任何取舍时不提示继续
+    if (favorites === 0 && survived === 0 && eliminated === 0) return null;
+
+    const settings = initialSettings(splitSkins);
+    return {
+        splitSkins,
+        favorites,
+        remaining: count(saved.current) + survived + count(saved.evaluating),
+        eliminated,
+        configText: describeSettings(settings),
+        savedAtText: typeof saved.savedAt === 'number' ? formatRelativeTime(saved.savedAt) : '',
+        settings
+    };
 }
 
 function getBatchSize(currentSize: number, settings: BaSettings): number {
@@ -123,16 +174,25 @@ async function boot(): Promise<void> {
             const { items } = buildScope(result.splitSkins);
             if (result.mode === 'fresh') clearSavedState(result.splitSkins);
 
+            // 存档额外记录写入时间，供开始页显示“上次进度”有多久
+            const key = storageKey(result.splitSkins);
             const picker = new Picker<BaItem, BaSettings>({
                 items,
-                localStorageKey: storageKey(result.splitSkins),
+                localStorageKey: key,
                 historyLength: CONFIG.historyLength,
                 defaultSettings: result.settings,
                 getBatchSize,
-                shouldIncludeItem: matchesBaScope
+                shouldIncludeItem: matchesBaScope,
+                saveState: (state) => {
+                    try {
+                        localStorage.setItem(key, JSON.stringify({ ...state, savedAt: Date.now() }));
+                    } catch {
+                        // localStorage 不可用时忽略
+                    }
+                }
             });
 
-            // 继续上次时，用开始页当前配置重新校验已有进度
+            // 继续上次时按开始页传入的存档配置恢复，避免表单修改改变已有进度
             if (result.mode === 'continue') picker.setSettings(result.settings);
 
             const view = new PickerView(picker, {
@@ -176,6 +236,7 @@ async function boot(): Promise<void> {
             initialSplitSkins: !readSavedState(false) && Boolean(readSavedState(true)),
             initialSettings,
             getSaveSummary,
+            onDeleteSave: (splitSkins) => clearSavedState(splitSkins),
             onStart: openPicker
         });
 

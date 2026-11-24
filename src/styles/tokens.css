@@ -59,6 +59,9 @@
     --ba-btn-yellow-edge: #f9da3b;
     --ba-btn-gray: #daedf4;
     --ba-btn-gray-edge: #c9e1ed;
+    /* 禁用态 平涂灰底灰字 */
+    --ba-btn-disabled-bg: #e2e3e3;
+    --ba-btn-disabled-text: #828282;
     --ba-btn-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
     --ba-active: #466398;
 
