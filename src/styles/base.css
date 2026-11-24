@@ -114,6 +114,16 @@ textarea {
     border-bottom: 1px solid var(--color-border);
 }
 
+/* 选择页的“下一批”临时数量 */
+.next-batch {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
 .layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr);

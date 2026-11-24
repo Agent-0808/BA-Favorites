@@ -73,10 +73,14 @@
                 </section>
 
                 <section class="start-section">
-                    <div class="section-title">每批卡片数</div>
-                    <span class="select-shell">
-                        <select id="batchSize"></select>
-                    </span>
+                    <div class="section-title">每批数量</div>
+                    <div class="batch-row">
+                        <span class="select-shell">
+                            <select id="batchSize"></select>
+                        </span>
+                        <label class="check"><input type="checkbox" id="fixedBatchSize"> 固定数量</label>
+                    </div>
+                    <p class="start-hint" id="batchHint"></p>
                 </section>
             </div>
 
@@ -152,6 +156,12 @@
 
             <section class="controls">
                 <span class="scope-summary" id="scopeSummary"></span>
+                <label class="next-batch">
+                    下一批
+                    <span class="select-shell">
+                        <select id="nextBatchSize"></select>
+                    </span>
+                </label>
                 <button type="button" class="ba-btn ba-btn--gray" id="backBtn">返回设置</button>
                 <button type="button" class="ba-btn ba-btn--gray" id="resetBtn">重置</button>
             </section>

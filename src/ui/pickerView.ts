@@ -14,6 +14,7 @@ export interface PickerViewElements {
     redoBtn: HTMLButtonElement;
     progressFill: HTMLElement;
     progressText: HTMLElement;
+    nextBatchSize: HTMLSelectElement;
     statFavorites: HTMLElement;
     statRemaining: HTMLElement;
     statEliminated: HTMLElement;
@@ -32,9 +33,26 @@ export class PickerView {
         private readonly picker: Picker<BaItem, BaSettings>,
         private readonly elements: PickerViewElements
     ) {
+        this.initNextBatchOptions();
         this.bindEvents();
         this.initSortable();
         this.update();
+    }
+
+    /** “下一批”下拉框：0 表示跟随设置，其余为一次性固定数量。 */
+    private initNextBatchOptions(): void {
+        const select = this.elements.nextBatchSize;
+        const follow = document.createElement('option');
+        follow.value = '0';
+        follow.textContent = '跟随设置';
+        select.append(follow);
+
+        for (const size of CONFIG.batchSizeOptions) {
+            const option = document.createElement('option');
+            option.value = String(size);
+            option.textContent = `${size} 张`;
+            select.append(option);
+        }
     }
 
     update(): void {
@@ -52,6 +70,7 @@ export class PickerView {
         this.renderFavorites(favorites);
         this.renderProgress(state, evaluating.length, favorites.length);
         this.updateButtons(evaluating.length);
+        this.elements.nextBatchSize.value = String(this.picker.getNextBatchSize() ?? 0);
         this.fitNames();
         this.layoutFavorites();
     }
@@ -78,7 +97,7 @@ export class PickerView {
     }
 
     private bindEvents(): void {
-        const { pickBtn, passBtn, undoBtn, redoBtn } = this.elements;
+        const { pickBtn, passBtn, undoBtn, redoBtn, nextBatchSize } = this.elements;
 
         pickBtn.addEventListener('click', () => {
             if (this.selected.size === 0) return;
@@ -103,6 +122,11 @@ export class PickerView {
             this.picker.redo();
             this.selected.clear();
             this.update();
+        });
+
+        nextBatchSize.addEventListener('change', () => {
+            const size = Number(nextBatchSize.value) || 0;
+            this.picker.setNextBatchSize(size > 0 ? size : null);
         });
 
         this.elements.toggleFavoritesBtn.addEventListener('click', () => {

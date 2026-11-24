@@ -44,6 +44,8 @@ export class PickerState<S extends PickerSettings = PickerSettings> {
         favorites: []
     };
     batchSize = 0;
+    /** 仅作用于下一批的临时数量，不写入存档。 */
+    private nextBatchSize: number | null = null;
     missingItems?: string[];
     extraItems?: string[];
 
@@ -79,6 +81,7 @@ export class PickerState<S extends PickerSettings = PickerSettings> {
          */
         this.settings = (settings ?? this.options.defaultSettings ?? {}) as S;
         this.items = this.getFilteredItems();
+        this.nextBatchSize = null;
 
         this.arrays = {
             eliminated: [],
@@ -101,6 +104,8 @@ export class PickerState<S extends PickerSettings = PickerSettings> {
         this.settings = mergeSettings(this.options.defaultSettings, state.settings);
 
         this.items = this.getFilteredItems();
+        // 撤销/恢复后不保留一次性的批次覆盖
+        this.nextBatchSize = null;
 
         this.arrays = {
             eliminated: state.eliminated.map((entry) => ({
@@ -132,9 +137,22 @@ export class PickerState<S extends PickerSettings = PickerSettings> {
          */
         this.settings = settings;
         this.items = this.getFilteredItems();
+        this.nextBatchSize = null;
 
         this.validate();
         this.resetBatchSize();
+    }
+
+    setNextBatchSize(size: number | null): void {
+        /**
+         * 指定下一批的固定数量；只生效一次，不进入存档。
+         */
+        this.nextBatchSize = size;
+    }
+
+    getNextBatchSize(): number | null {
+        /** 返回尚未生效的下一批覆盖值。 */
+        return this.nextBatchSize;
     }
 
     setFavorites(favorites: string[]): void {
@@ -371,13 +389,16 @@ export class PickerState<S extends PickerSettings = PickerSettings> {
          * 进入下一批，必要时进入下一轮并维护收藏。
          */
         const { current } = this.arrays;
+        // 一次性覆盖优先，否则使用本轮计算出的批次大小
+        const size = this.nextBatchSize ?? this.batchSize;
 
-        if (current.length < this.batchSize && this.arrays.survived.length > 0) {
+        if (current.length < size && this.arrays.survived.length > 0) {
             // 开始下一轮
             this.nextRound();
             return;
         }
-        this.arrays.evaluating = current.splice(0, this.batchSize);
+        this.nextBatchSize = null;
+        this.arrays.evaluating = current.splice(0, size);
     }
 
     nextRound(): void {
@@ -686,6 +707,18 @@ export class Picker<T extends PickerItem = PickerItem, S extends PickerSettings 
     setSettings(settings: S): void {
         this.state.setSettings(settings);
         this.pushHistory();
+    }
+
+    setNextBatchSize(size: number | null): void {
+        /**
+         * 指定下一批的固定数量，只生效一次，不影响已展示的批次。
+         */
+        this.state.setNextBatchSize(size);
+    }
+
+    getNextBatchSize(): number | null {
+        /** 返回尚未生效的下一批覆盖值。 */
+        return this.state.getNextBatchSize();
     }
 
     setFavorites(ids: string[]): void {

@@ -90,6 +90,8 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   const studentCount = byId('studentCount');
   const npcCount = byId('npcCount');
   const batchSize = byId<HTMLSelectElement>('batchSize');
+  const fixedBatchSize = byId<HTMLInputElement>('fixedBatchSize');
+  const batchHint = byId('batchHint');
   const savePanel = byId('savePanel');
   const saveMode = byId('saveMode');
   const saveTime = byId('saveTime');
@@ -115,8 +117,14 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   for (const size of CONFIG.batchSizeOptions) {
     const option = document.createElement('option');
     option.value = String(size);
-    option.textContent = size === 0 ? '自动' : `${size} 张`;
+    option.textContent = `${size} 张`;
     batchSize.append(option);
+  }
+
+  function updateBatchHint(): void {
+    batchHint.textContent = draft.fixedBatchSize
+      ? `每批固定 ${draft.batchSize} 张，不随剩余人数收缩`
+      : `按剩余人数自动收缩，最多 ${draft.batchSize} 张`;
   }
 
   function syncControls(): void {
@@ -126,9 +134,13 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
     for (const radio of serverRadios) {
       radio.checked = radio.value === draft.serverScope;
     }
-    const size = CONFIG.batchSizeOptions.includes(draft.batchSize) ? draft.batchSize : 0;
+    const size = CONFIG.batchSizeOptions.includes(draft.batchSize)
+      ? draft.batchSize
+      : CONFIG.defaultSettings.batchSize;
     draft.batchSize = size;
     batchSize.value = String(size);
+    fixedBatchSize.checked = draft.fixedBatchSize;
+    updateBatchHint();
   }
 
   function renderChips(
@@ -278,7 +290,14 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   }
 
   batchSize.addEventListener('change', () => {
-    draft.batchSize = Number(batchSize.value) || 0;
+    draft.batchSize = Number(batchSize.value) || CONFIG.defaultSettings.batchSize;
+    updateBatchHint();
+    refresh();
+  });
+
+  fixedBatchSize.addEventListener('change', () => {
+    draft.fixedBatchSize = fixedBatchSize.checked;
+    updateBatchHint();
     refresh();
   });
 
@@ -297,7 +316,11 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
     // 批大小不影响已有进度，改用表单里的当前值
     options.onStart({
       splitSkins: currentSave.splitSkins,
-      settings: { ...cloneSettings(currentSave.settings), batchSize: draft.batchSize },
+      settings: {
+        ...cloneSettings(currentSave.settings),
+        batchSize: draft.batchSize,
+        fixedBatchSize: draft.fixedBatchSize
+      },
       mode: 'continue'
     });
   });

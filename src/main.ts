@@ -79,7 +79,9 @@ function initialSettings(splitSkins: boolean): BaSettings {
         studentSchools: [...(saved.studentSchools ?? defaults.studentSchools)],
         npcSchools: [...(saved.npcSchools ?? defaults.npcSchools)],
         serverScope: saved.serverScope ?? defaults.serverScope,
-        batchSize: saved.batchSize ?? defaults.batchSize
+        // 旧存档里的 0 表示“自动”，现在统一视为默认上限
+        batchSize: saved.batchSize || defaults.batchSize,
+        fixedBatchSize: saved.fixedBatchSize ?? defaults.fixedBatchSize
     };
 }
 
@@ -96,11 +98,12 @@ function describeSettings(settings: BaSettings): string {
         if (!enabled) return `不含${label}`;
         return ids.length === 0 ? `${label}全部` : `${label} ${ids.length} 所`;
     };
+    const cap = settings.batchSize > 0 ? settings.batchSize : settings.maxBatchSize || 20;
     return [
         SERVER_SCOPE_LABELS[settings.serverScope],
         scope(settings.includeStudents, settings.studentSchools, '学生'),
         scope(settings.includeNpcs, settings.npcSchools, 'NPC'),
-        settings.batchSize > 0 ? `每批 ${settings.batchSize} 张` : '每批自动'
+        settings.fixedBatchSize ? `每批固定 ${cap} 张` : `每批上限 ${cap}`
     ].join(' · ');
 }
 
@@ -141,13 +144,32 @@ function getSaveSummary(splitSkins: boolean): SaveSummary | null {
     };
 }
 
+/** 当前窗口下候选网格能排下的列数，用于让批次铺满整行。 */
+function getColumnCount(): number {
+    // 数值与 base.css 的 .app 宽度上限、body/.layout 内边距和瓦片尺寸保持一致
+    const viewport = window.innerWidth;
+    const compact = viewport <= 600;
+    const tileWidth = compact ? 96 : 120;
+    const gap = 14;
+    // clientWidth 不含滚动条，避免出现滚动条时少算一列
+    const appWidth = Math.min(1240, document.documentElement.clientWidth - (compact ? 16 : 30));
+    const contentWidth = appWidth - (compact ? 28 : 48);
+    return Math.max(1, Math.floor((contentWidth + gap) / (tileWidth + gap)));
+}
+
+/**
+ * 每批数量：固定模式直接取设置值，否则随剩余人数收缩并以设置为上限；
+ * 自动模式在够一行时向下取整到整行，避免 9+1 这类短行。
+ */
 function getBatchSize(currentSize: number, settings: BaSettings): number {
-    if (settings.batchSize > 0) return settings.batchSize;
-    return Math.max(
-        2,
-        settings.minBatchSize || 2,
-        Math.min(settings.maxBatchSize || 20, Math.ceil(currentSize / 5))
-    );
+    const minSize = settings.minBatchSize || 2;
+    const cap = settings.batchSize > 0 ? settings.batchSize : settings.maxBatchSize || 20;
+    if (settings.fixedBatchSize) return Math.max(minSize, cap);
+
+    let size = Math.max(minSize, Math.min(cap, Math.ceil(currentSize / CONFIG.batchDivisor)));
+    const columns = getColumnCount();
+    if (size >= columns) size = Math.floor(size / columns) * columns;
+    return Math.max(minSize, size);
 }
 
 function scopeSummary(items: BaItem[], settings: BaSettings): string {
@@ -207,6 +229,7 @@ async function boot(): Promise<void> {
                 redoBtn: byId<HTMLButtonElement>('redoBtn'),
                 progressFill: byId('progressFill'),
                 progressText: byId('progressText'),
+                nextBatchSize: byId<HTMLSelectElement>('nextBatchSize'),
                 statFavorites: byId('statFavorites'),
                 statRemaining: byId('statRemaining'),
                 statEliminated: byId('statEliminated')

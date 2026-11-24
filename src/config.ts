@@ -13,8 +13,10 @@ export interface AppConfig {
   schoolsUrl: string;
   localStorageKey: string;
   historyLength: number;
-  /** 开始页可选的每批卡片数；0 表示自动。 */
+  /** 开始页与选择页可选的每批数量；自动收缩时作为上限。 */
   batchSizeOptions: number[];
+  /** 自动批次按剩余人数的几分之一收缩。 */
+  batchDivisor: number;
   favorites: FavoritePanelConfig;
   defaultSettings: BaSettings;
 }
@@ -24,7 +26,8 @@ export const CONFIG: AppConfig = {
   schoolsUrl: 'data/schools.json',
   localStorageKey: 'ba-favorite-picker-state',
   historyLength: 10,
-  batchSizeOptions: [0, 2, 4, 10, 12, 16, 18, 20],
+  batchSizeOptions: [2, 4, 6, 8, 10, 12, 16, 18, 20],
+  batchDivisor: 5,
   favorites: {
     previewRows: 2,
     maxRows: 3
@@ -38,7 +41,8 @@ export const CONFIG: AppConfig = {
     studentSchools: [],
     npcSchools: [],
     serverScope: 'all',
-    batchSize: 0
+    batchSize: 20,
+    fixedBatchSize: false
   }
 };
 

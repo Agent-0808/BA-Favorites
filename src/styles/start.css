@@ -44,6 +44,14 @@
     color: var(--color-text-muted);
 }
 
+/* 每批数量：下拉框与“固定数量”开关并排 */
+.batch-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
 .radio-row {
     display: flex;
     flex-wrap: wrap;

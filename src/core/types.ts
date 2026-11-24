@@ -70,6 +70,8 @@ export interface BaSettings extends PickerSettings {
   studentSchools: number[];
   npcSchools: number[];
   serverScope: ServerScope;
-  /** 每批卡片数；0 表示自动。 */
+  /** 每批卡片数：自动收缩时作为上限，固定数量时作为实际数量。 */
   batchSize: number;
+  /** 是否固定每批数量，不随剩余人数收缩。 */
+  fixedBatchSize: boolean;
 }
