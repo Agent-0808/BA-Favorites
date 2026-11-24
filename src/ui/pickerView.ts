@@ -1,10 +1,13 @@
 import Sortable from 'sortablejs';
+import { CONFIG } from '../config';
 import type { Picker } from '../core/picker';
 import type { BaItem, BaSettings, PickerStateSnapshot } from '../core/types';
 
 export interface PickerViewElements {
     evaluating: HTMLElement;
     favorites: HTMLElement;
+    favoritesMeta: HTMLElement;
+    toggleFavoritesBtn: HTMLButtonElement;
     pickBtn: HTMLButtonElement;
     passBtn: HTMLButtonElement;
     undoBtn: HTMLButtonElement;
@@ -22,6 +25,8 @@ export interface PickerViewElements {
  */
 export class PickerView {
     private readonly selected = new Set<string>();
+    /** 底部最爱区是否展开显示全部排名。 */
+    private favoritesExpanded = false;
 
     constructor(
         private readonly picker: Picker<BaItem, BaSettings>,
@@ -48,6 +53,7 @@ export class PickerView {
         this.renderProgress(state, evaluating.length, favorites.length);
         this.updateButtons(evaluating.length);
         this.fitNames();
+        this.layoutFavorites();
     }
 
     /**
@@ -98,6 +104,14 @@ export class PickerView {
             this.selected.clear();
             this.update();
         });
+
+        this.elements.toggleFavoritesBtn.addEventListener('click', () => {
+            this.favoritesExpanded = !this.favoritesExpanded;
+            this.layoutFavorites();
+        });
+
+        // 列数随窗口宽度变化，重新计算最爱区可见行数
+        window.addEventListener('resize', () => this.layoutFavorites());
     }
 
     private initSortable(): void {
@@ -167,6 +181,42 @@ export class PickerView {
             wrapper.append(tile, name);
             container.append(wrapper);
         });
+    }
+
+    /**
+     * 底部最爱区按实际列数限制高度：收起时只露 previewRows 行，
+     * 展开时最多露 maxRows 行，超出部分内部滚动。
+     */
+    private layoutFavorites(): void {
+        const { favorites: grid, favoritesMeta, toggleFavoritesBtn } = this.elements;
+        const items = [...grid.querySelectorAll<HTMLElement>('.fav-item')];
+        favoritesMeta.textContent = `${items.length} 个`;
+
+        if (items.length === 0) {
+            grid.style.maxHeight = '';
+            grid.classList.remove('is-expanded');
+            toggleFavoritesBtn.hidden = true;
+            return;
+        }
+
+        // 首行元素数量即列数；取最高的一张，避免名称缩字后行高不一致
+        const first = items[0];
+        const columns = items.filter(entry => entry.offsetTop === first.offsetTop).length;
+        const totalRows = Math.ceil(items.length / columns);
+        const rowGap = parseFloat(getComputedStyle(grid).rowGap) || 0;
+        const rowHeight = Math.max(...items.map(entry => entry.offsetHeight));
+        const previewRows = CONFIG.favorites.previewRows;
+        const visibleRows = this.favoritesExpanded
+            ? Math.min(totalRows, CONFIG.favorites.maxRows)
+            : Math.min(totalRows, previewRows);
+
+        grid.classList.toggle('is-expanded', this.favoritesExpanded);
+        grid.style.maxHeight = `${Math.ceil(rowHeight * visibleRows + rowGap * (visibleRows - 1))}px`;
+        if (!this.favoritesExpanded) grid.scrollTop = 0;
+
+        toggleFavoritesBtn.hidden = totalRows <= previewRows;
+        toggleFavoritesBtn.textContent = this.favoritesExpanded ? '收起' : `展开全部 · ${items.length}`;
+        toggleFavoritesBtn.setAttribute('aria-expanded', String(this.favoritesExpanded));
     }
 
     private createTile(item: BaItem, selectable: boolean): HTMLElement {

@@ -199,6 +199,8 @@ async function boot(): Promise<void> {
             const view = new PickerView(picker, {
                 evaluating: byId('evaluating'),
                 favorites: byId('favorites'),
+                favoritesMeta: byId('favoritesMeta'),
+                toggleFavoritesBtn: byId<HTMLButtonElement>('toggleFavoritesBtn'),
                 pickBtn: byId<HTMLButtonElement>('pickBtn'),
                 passBtn: byId<HTMLButtonElement>('passBtn'),
                 undoBtn: byId<HTMLButtonElement>('undoBtn'),

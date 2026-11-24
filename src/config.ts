@@ -1,5 +1,13 @@
 import type { BaSettings } from './core/types';
 
+/** 底部“我的最爱”的展示配置。 */
+export interface FavoritePanelConfig {
+  /** 收起时显示的行数。 */
+  previewRows: number;
+  /** 展开后最多显示的行数，超出则内部滚动。 */
+  maxRows: number;
+}
+
 export interface AppConfig {
   studentsUrl: string;
   schoolsUrl: string;
@@ -7,6 +15,7 @@ export interface AppConfig {
   historyLength: number;
   /** 开始页可选的每批卡片数；0 表示自动。 */
   batchSizeOptions: number[];
+  favorites: FavoritePanelConfig;
   defaultSettings: BaSettings;
 }
 
@@ -16,6 +25,10 @@ export const CONFIG: AppConfig = {
   localStorageKey: 'ba-favorite-picker-state',
   historyLength: 10,
   batchSizeOptions: [0, 2, 4, 10, 12, 16, 18, 20],
+  favorites: {
+    previewRows: 2,
+    maxRows: 3
+  },
   defaultSettings: {
     minBatchSize: 2,
     maxBatchSize: 20,

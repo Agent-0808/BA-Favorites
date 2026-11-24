@@ -80,7 +80,46 @@
     transform-origin: bottom center;
 }
 
-/* ---------- 我的最爱 ---------- */
+/* ---------- 我的最爱（页面底部） ---------- */
+
+.favorites {
+    min-width: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+}
+
+.favorites-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.favorites-head .section-title {
+    flex: 1 1 180px;
+    margin-bottom: 0;
+}
+
+.favorites-meta {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+/* 收起时只露若干行，展开后最多再显示若干行并允许内部滚动 */
+.favorites-grid {
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.favorites-grid.is-expanded {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #a9c9e2 transparent;
+}
 
 .fav-item {
     display: flex;
