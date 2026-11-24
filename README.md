@@ -2,16 +2,13 @@
 
 基于 [Favorite Picker](https://github.com/antialiasis/favorite-picker) 改造的《蔚蓝档案》角色喜好排序工具。通过反复从一批角色中选出更喜欢的角色，逐轮淘汰，最终得到完整的喜好排名。
 
-角色数据来自 [BA-characters-internal-id](https://github.com/Agent-0808/BA-characters-internal-id)，以外置 JSON 的形式加载。
-
 ## 功能
 
 - 开始页配置角色范围：学生 / NPC 分栏选择学校，可叠加实装范围与每批卡片数
-- 348 个角色（含 NPC），按角色粒度参与排序；可开启皮肤拆分，把每个形态作为独立角色
-- 皮肤拆分模式使用独立存档，两种模式可以分别继续
-- BA 风格斜切卡片：固定尺寸头像、底部半透明名称条、悬停与选中高亮
+- 348 个角色（含 NPC），按角色粒度参与排序
+- 可开启皮肤拆分，把每个皮肤进行独立排序
+- 还原 BA 风格的界面
 - 进度条显示已筛选 / 总候选、剩余候选，以及预计还需多少次选择
-- 已选列表显示爱心与排名，支持拖拽排序
 - 自动保存到 localStorage，刷新后可继续或重新开始；支持 Undo / Redo / 重置
 
 ## 开发
@@ -73,7 +70,6 @@ src/
   styles/                设计变量与组件样式
 public/data/             外置角色数据
 scripts/update-data.mjs  更新数据快照
-legacy/                  旧版 JavaScript 实现，仅供对照，不参与构建
 ```
 
 ## 致谢
