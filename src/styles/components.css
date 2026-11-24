@@ -218,62 +218,228 @@
     fill: currentColor;
 }
 
-/* ---------- 关于弹窗 ---------- */
+/* ---------- 通用弹窗（BA 游戏风标题栏 + 灰底卡片） ---------- */
 
-.about-dialog {
+.ba-dialog {
+    /* 弹窗专属配色，集中在此便于后续弹窗统一调整 */
+    --dialog-head-a: #cfe6f9;
+    --dialog-head-b: #ffffff;
+    --dialog-body-bg: #dbe6f1;
+    --dialog-line: #b9cfe3;
+
+    display: flex;
+    flex-direction: column;
     /* 全局 * { margin: 0 } 会覆盖浏览器给 dialog 的居中 margin，这里补回 */
     margin: auto;
-    width: min(480px, calc(100vw - 32px));
-    padding: 20px 22px;
+    width: min(520px, calc(100vw - 32px));
+    max-height: min(82vh, 720px);
+    padding: 0;
+    overflow: hidden;
+    /* 整块白色窗口只有一层，顶部由标题栏渐变过渡到白色 */
     background: var(--color-surface);
-    border: 2px solid var(--ba-accent);
-    border-radius: var(--radius-card);
-    box-shadow: var(--shadow-card);
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: 0 12px 32px rgba(23, 52, 86, 0.26);
 }
 
-.about-dialog::backdrop {
+/* display:flex 覆盖了浏览器对未打开 dialog 的 display:none，这里补回 */
+.ba-dialog:not([open]) {
+    display: none;
+}
+
+.ba-dialog::backdrop {
     background: rgba(20, 40, 70, 0.45);
 }
 
-.about-head {
+/* 白色底板只在下半部分：面板透明，靠 dialog 的白色作底 */
+.ba-dialog-panel {
     display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
-}
-
-.about-head .section-title {
     flex: 1;
-    margin-bottom: 0;
+    flex-direction: column;
+    min-height: 0;
+    gap: 8px;
+    padding: 8px;
+    overflow: hidden;
 }
 
-.about-close {
-    padding: 0 6px;
-    font-size: 20px;
+/* 标题栏与窗口连成一体，只保留浅蓝到白的渐变 */
+.ba-dialog-head {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 10px 52px;
+    /* 蓝色只从左侧起，向右淡出到白色 */
+    background: linear-gradient(90deg, var(--dialog-head-a) 0%, #eaf4fd 12%, #f8fcff 34%, var(--dialog-head-b) 70%);
+}
+
+.ba-dialog-title {
+    position: relative;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ba-title);
+}
+
+/* 标题下方的黄色强调条 */
+.ba-dialog-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 88px;
+    height: 3px;
+    background: var(--ba-highlight);
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.ba-dialog-close {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 26px;
+    font-weight: 300;
     line-height: 1;
-    color: var(--color-text-muted);
+    color: var(--ba-navy);
     background: none;
     border: none;
     cursor: pointer;
+    transform: translateY(-50%);
+    transition: color 0.15s;
 }
 
-.about-close:hover {
-    color: var(--ba-navy);
+.ba-dialog-close:hover {
+    color: var(--ba-accent-deep);
 }
 
-.about-body {
+.ba-dialog-body {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 10px;
+    min-height: 0;
+    padding: 10px;
+    overflow-y: auto;
+    background: var(--dialog-body-bg);
+    border-radius: var(--radius-sm);
+    /* 细滚动条：浅蓝轨道 + 蓝色滑块 */
+    scrollbar-width: thin;
+    scrollbar-color: #a9c9e2 transparent;
+    overscroll-behavior: contain;
+}
+
+.ba-dialog-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ba-dialog-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ba-dialog-body::-webkit-scrollbar-thumb {
+    background: #a9c9e2;
+    border-radius: 999px;
+}
+
+.ba-dialog-body::-webkit-scrollbar-thumb:hover {
+    background: var(--ba-accent-2);
+}
+
+/* 分区：灰色底上的白色卡片，卡片内是竖条标题 + 点状虚线 */
+.ba-dialog-section {
+    flex: none;
+    padding: 12px 14px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.ba-dialog-section-title {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 0 7px 11px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ba-navy);
+    border-bottom: 1px dotted var(--dialog-line);
+}
+
+.ba-dialog-section-title::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 9px;
+    left: 0;
+    width: 3px;
+    background: var(--ba-accent-2);
+    border-radius: 2px;
+}
+
+.ba-dialog-section p {
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--color-text-secondary);
 }
 
-.about-body a {
+.ba-dialog-section p + p {
+    margin-top: 8px;
+}
+
+.ba-dialog-section a {
     font-weight: 600;
     color: var(--ba-accent-deep);
+}
+
+.ba-dialog-section a:hover {
+    color: var(--ba-accent);
+}
+
+/* 链接行：相关链接区使用 */
+.ba-link-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ba-accent-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ba-link-row:last-child {
+    border-bottom: none;
+}
+
+.ba-link-arrow {
+    font-size: 12px;
+    color: var(--color-text-subtle);
+}
+
+.ba-link-row:hover .ba-link-arrow {
+    color: var(--ba-accent);
+}
+
+/* 底部操作区：沿用全站斜切按钮 */
+.ba-dialog-foot {
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    background: var(--color-bg);
+    border-radius: var(--radius-sm);
 }
 
 /* ---------- 已选列表拖拽 ---------- */
@@ -297,5 +463,18 @@
 
     .progress-text {
         font-size: 11px;
+    }
+
+    .ba-dialog {
+        width: calc(100vw - 20px);
+        max-height: calc(100vh - 24px);
+    }
+
+    .ba-dialog-title {
+        font-size: 17px;
+    }
+
+    .ba-dialog-body {
+        padding: 10px;
     }
 }

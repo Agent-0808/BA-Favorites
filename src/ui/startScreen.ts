@@ -66,7 +66,6 @@ function settingsDiffer(draft: BaSettings, saved: BaSettings): boolean {
     draft.includeStudents !== saved.includeStudents ||
     draft.includeNpcs !== saved.includeNpcs ||
     draft.serverScope !== saved.serverScope ||
-    draft.batchSize !== saved.batchSize ||
     !sameIds(draft.studentSchools, saved.studentSchools) ||
     !sameIds(draft.npcSchools, saved.npcSchools)
   );
@@ -294,10 +293,11 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
 
   continueBtn.addEventListener('click', () => {
     if (!currentSave) return;
-    // 继续时按存档配置恢复，避免表单修改意外改变已有进度
+    // 继续时按存档配置恢复，避免表单修改意外改变已有进度；
+    // 批大小不影响已有进度，改用表单里的当前值
     options.onStart({
       splitSkins: currentSave.splitSkins,
-      settings: cloneSettings(currentSave.settings),
+      settings: { ...cloneSettings(currentSave.settings), batchSize: draft.batchSize },
       mode: 'continue'
     });
   });
