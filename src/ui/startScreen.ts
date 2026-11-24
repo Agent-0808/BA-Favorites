@@ -11,6 +11,20 @@ export interface StartResult {
   mode: StartMode;
 }
 
+/** 开始页展示的存档摘要。 */
+export interface SaveSummary {
+  splitSkins: boolean;
+  favorites: number;
+  remaining: number;
+  eliminated: number;
+  /** 存档配置的一行描述。 */
+  configText: string;
+  /** 相对时间；旧存档没有时间戳时为空。 */
+  savedAtText: string;
+  /** 合并默认值后的完整设置，继续时按它恢复。 */
+  settings: BaSettings;
+}
+
 /** 开始页依赖的数据与回调，由 main 提供。 */
 export interface StartScreenOptions {
   /** 按是否拆分皮肤构建 items 与学校分组。 */
@@ -20,13 +34,42 @@ export interface StartScreenOptions {
   /** 读取指定模式下的初始设置（默认值 + 已保存设置）。 */
   initialSettings: (splitSkins: boolean) => BaSettings;
   /** 返回指定模式下的存档摘要；没有存档时返回 null。 */
-  getSaveSummary: (splitSkins: boolean) => string | null;
+  getSaveSummary: (splitSkins: boolean) => SaveSummary | null;
+  /** 删除指定模式的存档。 */
+  onDeleteSave: (splitSkins: boolean) => void;
   onStart: (result: StartResult) => void;
 }
 
 export interface StartScreen {
   show: () => void;
   hide: () => void;
+}
+
+function cloneSettings(settings: BaSettings): BaSettings {
+  return {
+    ...settings,
+    studentSchools: [...settings.studentSchools],
+    npcSchools: [...settings.npcSchools]
+  };
+}
+
+function sameIds(a: number[], b: number[]): boolean {
+  if (a.length !== b.length) return false;
+  const ids = new Set(a);
+  return b.every(id => ids.has(id));
+}
+
+/** 表单里的可编辑配置是否与存档配置不同。 */
+function settingsDiffer(draft: BaSettings, saved: BaSettings): boolean {
+  return (
+    draft.splitSkins !== saved.splitSkins ||
+    draft.includeStudents !== saved.includeStudents ||
+    draft.includeNpcs !== saved.includeNpcs ||
+    draft.serverScope !== saved.serverScope ||
+    draft.batchSize !== saved.batchSize ||
+    !sameIds(draft.studentSchools, saved.studentSchools) ||
+    !sameIds(draft.npcSchools, saved.npcSchools)
+  );
 }
 
 /** 创建开始页：角色范围配置、存档选择与开始按钮。 */
@@ -48,15 +91,27 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   const studentCount = byId('studentCount');
   const npcCount = byId('npcCount');
   const batchSize = byId<HTMLSelectElement>('batchSize');
-  const startSummary = byId('startSummary');
+  const savePanel = byId('savePanel');
+  const saveMode = byId('saveMode');
+  const saveTime = byId('saveTime');
+  const saveFavorites = byId('saveFavorites');
+  const saveRemaining = byId('saveRemaining');
+  const saveEliminated = byId('saveEliminated');
+  const saveConfig = byId('saveConfig');
+  const saveDiff = byId('saveDiff');
+  const restoreSaveBtn = byId<HTMLButtonElement>('restoreSaveBtn');
+  const saveOther = byId('saveOther');
+  const saveOtherMode = byId('saveOtherMode');
+  const switchModeBtn = byId<HTMLButtonElement>('switchModeBtn');
   const startBtn = byId<HTMLButtonElement>('startBtn');
   const continueBtn = byId<HTMLButtonElement>('continueBtn');
-  const restartBtn = byId<HTMLButtonElement>('restartBtn');
+  const deleteSaveBtn = byId<HTMLButtonElement>('deleteSaveBtn');
   const serverRadios = [...root.querySelectorAll<HTMLInputElement>('input[name="serverScope"]')];
 
   let draft: BaSettings = options.initialSettings(options.initialSplitSkins);
   let items: BaItem[] = [];
   let groups: SchoolGroups = { students: [], npcs: [] };
+  let currentSave: SaveSummary | null = null;
 
   for (const size of CONFIG.batchSizeOptions) {
     const option = document.createElement('option');
@@ -140,10 +195,27 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
     itemCount.textContent = `当前将参与排序：${filtered.length} 项（学生 ${students} · NPC ${npcs}）`;
 
     const save = options.getSaveSummary(draft.splitSkins);
-    startSummary.textContent = save ?? '';
-    continueBtn.hidden = !save;
-    restartBtn.hidden = !save;
-    startBtn.hidden = Boolean(save);
+    currentSave = save;
+    savePanel.hidden = !save;
+    if (save) {
+      const differs = settingsDiffer(draft, save.settings);
+      saveMode.textContent = save.splitSkins ? '皮肤拆分' : '普通';
+      saveTime.textContent = save.savedAtText;
+      saveFavorites.textContent = String(save.favorites);
+      saveRemaining.textContent = String(save.remaining);
+      saveEliminated.textContent = String(save.eliminated);
+      saveConfig.textContent = save.configText;
+      saveDiff.hidden = !differs;
+      // 配置不一致时禁止直接继续，避免悄悄丢弃当前表单修改
+      continueBtn.disabled = differs;
+    }
+
+    // 另一模式也有存档时给出入口，避免切换勾选后误以为存档消失
+    const other = options.getSaveSummary(!draft.splitSkins);
+    saveOther.hidden = !other;
+    if (other) {
+      saveOtherMode.textContent = other.splitSkins ? '皮肤拆分' : '普通';
+    }
   }
 
   function rebuild(): void {
@@ -208,19 +280,47 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
 
   batchSize.addEventListener('change', () => {
     draft.batchSize = Number(batchSize.value) || 0;
+    refresh();
   });
 
-  function start(mode: StartMode): void {
+  startBtn.addEventListener('click', () => {
+    if (currentSave && !confirm('开始排序会覆盖当前模式的上次进度，确定继续吗？')) return;
     options.onStart({
       splitSkins: draft.splitSkins,
-      settings: { ...draft, studentSchools: [...draft.studentSchools], npcSchools: [...draft.npcSchools] },
-      mode
+      settings: cloneSettings(draft),
+      mode: 'fresh'
     });
-  }
+  });
 
-  startBtn.addEventListener('click', () => start('fresh'));
-  continueBtn.addEventListener('click', () => start('continue'));
-  restartBtn.addEventListener('click', () => start('fresh'));
+  continueBtn.addEventListener('click', () => {
+    if (!currentSave) return;
+    // 继续时按存档配置恢复，避免表单修改意外改变已有进度
+    options.onStart({
+      splitSkins: currentSave.splitSkins,
+      settings: cloneSettings(currentSave.settings),
+      mode: 'continue'
+    });
+  });
+
+  deleteSaveBtn.addEventListener('click', () => {
+    if (!confirm('确定删除当前模式的上次进度吗？删除后无法恢复。')) return;
+    options.onDeleteSave(draft.splitSkins);
+    refresh();
+  });
+
+  restoreSaveBtn.addEventListener('click', () => {
+    draft = options.initialSettings(draft.splitSkins);
+    syncControls();
+    rebuild();
+  });
+
+  switchModeBtn.addEventListener('click', () => {
+    // 直接载入另一模式的存档配置并切换
+    draft = options.initialSettings(!draft.splitSkins);
+    splitSkins.checked = draft.splitSkins;
+    syncControls();
+    rebuild();
+  });
 
   syncControls();
   rebuild();

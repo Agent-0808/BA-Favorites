@@ -199,6 +199,127 @@
     accent-color: var(--color-accent);
 }
 
+/* ---------- 上次进度存档卡片 ---------- */
+
+.save-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 24px 16px;
+}
+
+.save-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 18px;
+    background: var(--color-surface);
+    border: 1.5px solid var(--ba-accent);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.save-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.save-head-left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.save-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ba-navy);
+}
+
+.save-mode {
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ba-th-text);
+    background: var(--ba-th-bg);
+    border-radius: var(--radius-pill);
+}
+
+.save-time {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.save-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.save-metric {
+    display: inline-flex;
+    gap: 5px;
+    align-items: baseline;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.save-metric strong {
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ba-navy);
+}
+
+.save-config {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.save-diff {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    font-size: 12px;
+    color: var(--ba-accent-deep);
+}
+
+.save-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+/* “切换查看”这类次要文字操作 */
+.save-link {
+    padding: 0;
+    font-size: 12px;
+    color: var(--color-accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.save-link:hover {
+    text-decoration: underline;
+}
+
+.save-other {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
 /* ---------- 底部操作区 ---------- */
 
 .start-actions {
@@ -245,7 +366,8 @@
 @media (max-width: 600px) {
     .start-header,
     .start-body,
-    .start-actions {
+    .start-actions,
+    .save-panel {
         padding-right: 14px;
         padding-left: 14px;
     }
