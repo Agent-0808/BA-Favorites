@@ -177,6 +177,105 @@
     margin-top: 18px;
 }
 
+/* ---------- 页头图标链接（GitHub / 关于） ---------- */
+
+.header-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-links {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.icon-link {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: var(--ba-navy);
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.icon-link:hover {
+    color: var(--ba-accent-deep);
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.icon-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* ---------- 关于弹窗 ---------- */
+
+.about-dialog {
+    /* 全局 * { margin: 0 } 会覆盖浏览器给 dialog 的居中 margin，这里补回 */
+    margin: auto;
+    width: min(480px, calc(100vw - 32px));
+    padding: 20px 22px;
+    background: var(--color-surface);
+    border: 2px solid var(--ba-accent);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.about-dialog::backdrop {
+    background: rgba(20, 40, 70, 0.45);
+}
+
+.about-head {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.about-head .section-title {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.about-close {
+    padding: 0 6px;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.about-close:hover {
+    color: var(--ba-navy);
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.about-body a {
+    font-weight: 600;
+    color: var(--ba-accent-deep);
+}
+
 /* ---------- 已选列表拖拽 ---------- */
 
 .fav-item.dragging {

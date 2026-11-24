@@ -8,6 +8,11 @@
 }
 
 .start-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+    justify-content: space-between;
     padding: 18px 24px;
     background: linear-gradient(180deg, var(--ba-header-a) 0%, var(--ba-header-b) 100%);
     border-bottom: 1px solid var(--color-border);
@@ -327,27 +332,20 @@
     flex-wrap: wrap;
     gap: 14px;
     align-items: center;
+    justify-content: flex-end;
     padding: 16px 24px;
     background: var(--color-bg);
     border-top: 1px solid var(--color-border);
 }
 
-.start-summary {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin-right: auto;
-    font-size: 12px;
-    color: var(--color-text-muted);
-}
-
-.start-summary > :empty {
-    display: none;
-}
-
+/* 顶栏的参与排序计数：数据加载前为空则不占位 */
 .start-count {
     font-size: 13px;
     color: var(--ba-navy);
+}
+
+.start-count:empty {
+    display: none;
 }
 
 .start-buttons {
