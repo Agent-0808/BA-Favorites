@@ -487,6 +487,21 @@
     opacity: 0.35;
 }
 
+/* ---------- 结果页 ---------- */
+
+.result-body {
+    padding: 24px 24px 32px;
+}
+
+.result-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
 @media (max-width: 600px) {
     :root {
         --tile-width: 96px;
@@ -515,5 +530,9 @@
 
     .ba-dialog-body {
         padding: 10px;
+    }
+
+    .result-body {
+        padding: 16px 14px 24px;
     }
 }

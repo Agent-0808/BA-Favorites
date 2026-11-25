@@ -8,6 +8,16 @@ export interface FavoritePanelConfig {
   maxRows: number;
 }
 
+/** “结果”页的方格布局配置。 */
+export interface ResultConfig {
+  /** 卡片宽度的上限。 */
+  maxTile: number;
+  /** 卡片宽度的下限，低于此值时允许滚动。 */
+  minTile: number;
+  /** 卡片间距。 */
+  gap: number;
+}
+
 export interface AppConfig {
   studentsUrl: string;
   schoolsUrl: string;
@@ -18,6 +28,7 @@ export interface AppConfig {
   /** 自动批次按剩余人数的几分之一收缩。 */
   batchDivisor: number;
   favorites: FavoritePanelConfig;
+  result: ResultConfig;
   defaultSettings: BaSettings;
 }
 
@@ -31,6 +42,11 @@ export const CONFIG: AppConfig = {
   favorites: {
     previewRows: 2,
     maxRows: 3
+  },
+  result: {
+    maxTile: 240,
+    minTile: 72,
+    gap: 14
   },
   defaultSettings: {
     minBatchSize: 2,

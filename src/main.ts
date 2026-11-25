@@ -10,6 +10,7 @@ import { Picker } from './core/picker';
 import type { BaItem, BaSettings } from './core/types';
 import { fetchJson, matchesBaScope, toItems, toSchoolGroups, type School, type SchoolGroups, type Student } from './data/ba';
 import { setupAboutDialog } from './ui/aboutDialog';
+import { ResultPage } from './ui/resultPage';
 import { PickerView } from './ui/pickerView';
 import { createStartScreen, type SaveSummary, type StartResult } from './ui/startScreen';
 
@@ -218,11 +219,21 @@ async function boot(): Promise<void> {
             // 继续上次时按开始页传入的存档配置恢复，避免表单修改改变已有进度
             if (result.mode === 'continue') picker.setSettings(result.settings);
 
-            const view = new PickerView(picker, {
+            let view: PickerView;
+            const resultPage = new ResultPage({
+                screen: byId('resultScreen'),
+                pickerScreen: byId('pickerScreen'),
+                grid: byId('resultGrid'),
+                count: byId('resultCount'),
+                backBtn: byId<HTMLButtonElement>('backToPickerBtn')
+            }, () => view.update());
+
+            view = new PickerView(picker, {
                 evaluating: byId('evaluating'),
                 favorites: byId('favorites'),
                 favoritesMeta: byId('favoritesMeta'),
                 toggleFavoritesBtn: byId<HTMLButtonElement>('toggleFavoritesBtn'),
+                resultBtn: byId<HTMLButtonElement>('resultBtn'),
                 pickBtn: byId<HTMLButtonElement>('pickBtn'),
                 passBtn: byId<HTMLButtonElement>('passBtn'),
                 undoBtn: byId<HTMLButtonElement>('undoBtn'),
@@ -233,7 +244,7 @@ async function boot(): Promise<void> {
                 statFavorites: byId('statFavorites'),
                 statRemaining: byId('statRemaining'),
                 statEliminated: byId('statEliminated')
-            });
+            }, resultPage);
 
             function updateScopeSummary(): void {
                 byId('scopeSummary').textContent = scopeSummary(items, picker.getSettings());

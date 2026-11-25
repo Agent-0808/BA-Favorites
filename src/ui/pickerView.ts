@@ -2,12 +2,14 @@ import Sortable from 'sortablejs';
 import { CONFIG } from '../config';
 import type { Picker } from '../core/picker';
 import type { BaItem, BaSettings, PickerStateSnapshot } from '../core/types';
+import type { ResultPage } from './resultPage';
 
 export interface PickerViewElements {
     evaluating: HTMLElement;
     favorites: HTMLElement;
     favoritesMeta: HTMLElement;
     toggleFavoritesBtn: HTMLButtonElement;
+    resultBtn: HTMLButtonElement;
     pickBtn: HTMLButtonElement;
     passBtn: HTMLButtonElement;
     undoBtn: HTMLButtonElement;
@@ -31,7 +33,8 @@ export class PickerView {
 
     constructor(
         private readonly picker: Picker<BaItem, BaSettings>,
-        private readonly elements: PickerViewElements
+        private readonly elements: PickerViewElements,
+        private readonly resultPage: ResultPage
     ) {
         this.initNextBatchOptions();
         this.bindEvents();
@@ -70,6 +73,7 @@ export class PickerView {
         this.renderFavorites(favorites);
         this.renderProgress(state, evaluating.length, favorites.length);
         this.updateButtons(evaluating.length);
+        this.elements.resultBtn.disabled = favorites.length === 0;
         this.elements.nextBatchSize.value = String(this.picker.getNextBatchSize() ?? 0);
         this.fitNames();
         this.layoutFavorites();
@@ -97,7 +101,11 @@ export class PickerView {
     }
 
     private bindEvents(): void {
-        const { pickBtn, passBtn, undoBtn, redoBtn, nextBatchSize } = this.elements;
+        const { pickBtn, passBtn, undoBtn, redoBtn, nextBatchSize, resultBtn } = this.elements;
+
+        resultBtn.addEventListener('click', () => {
+            this.resultPage.open(this.picker.getFavorites());
+        });
 
         pickBtn.addEventListener('click', () => {
             if (this.selected.size === 0) return;

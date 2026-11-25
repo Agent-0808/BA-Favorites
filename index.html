@@ -191,9 +191,26 @@
                         <div class="section-title">我的最爱</div>
                         <span class="favorites-meta" id="favoritesMeta">0 个</span>
                         <button type="button" class="ba-btn ba-btn--ghost ba-btn--sm" id="toggleFavoritesBtn" hidden>展开全部</button>
+                        <button type="button" class="ba-btn ba-btn--gray ba-btn--sm" id="resultBtn" disabled>结果</button>
                     </div>
                     <div class="tile-grid tile-grid--small favorites-grid" id="favorites"></div>
                 </section>
+            </main>
+        </section>
+
+        <!-- 结果页 -->
+        <section class="picker result-page" id="resultScreen" hidden>
+            <header class="app-header">
+                <div class="header-left">
+                    <h1>我的最爱</h1>
+                    <p class="subtitle">共 <span id="resultCount">0</span> 位 · 按喜好排序</p>
+                </div>
+                <div class="header-side">
+                    <button type="button" class="ba-btn ba-btn--gray" id="backToPickerBtn">返回排序</button>
+                </div>
+            </header>
+            <main class="result-body">
+                <div class="result-grid" id="resultGrid"></div>
             </main>
         </section>
 
