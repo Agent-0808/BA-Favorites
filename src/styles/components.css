@@ -496,7 +496,7 @@
 .result-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: var(--result-gap, 20px);
     justify-content: center;
     align-items: flex-start;
     margin: 0 auto;

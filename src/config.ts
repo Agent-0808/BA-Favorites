@@ -16,6 +16,16 @@ export interface ResultConfig {
   minTile: number;
   /** 卡片间距。 */
   gap: number;
+  /** 窄屏（≤600px）下的卡片间距。 */
+  compactGap: number;
+  /** 窄屏（≤600px）下的卡片宽度下限。 */
+  compactMinTile: number;
+  /** 整体宽高比目标：1 接近正方，越大越横向。 */
+  targetRatio: number;
+  /** 每空一个卡片位置的扣分权重。 */
+  emptyWeight: number;
+  /** 超出首屏高度的扣分权重。 */
+  overflowWeight: number;
 }
 
 export interface AppConfig {
@@ -46,7 +56,12 @@ export const CONFIG: AppConfig = {
   result: {
     maxTile: 140,
     minTile: 100,
-    gap: 20
+    gap: 20,
+    compactGap: 12,
+    compactMinTile: 96,
+    targetRatio: 1.1,
+    emptyWeight: 8,
+    overflowWeight: 8
   },
   defaultSettings: {
     minBatchSize: 2,

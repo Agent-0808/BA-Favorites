@@ -94,17 +94,21 @@ export class ResultPage {
         });
     }
 
-    /** 按数量选接近正方的列数，并在首屏内缩放卡片。 */
+    /** 枚举可行列数，按宽高比、空位和是否超出首屏评分，取最优。 */
     private layout(): void {
         const { grid } = this.elements;
         const count = this.items.length;
         if (count === 0) return;
 
-        const gap = CONFIG.result.gap;
         const body = grid.parentElement;
         const header = this.elements.screen.querySelector<HTMLElement>('.app-header');
         if (!body) return;
 
+        // 手机竖屏用更小的间距和下限，避免只能排两列
+        const compact = window.matchMedia('(max-width: 600px)').matches;
+        const gap = compact ? CONFIG.result.compactGap : CONFIG.result.gap;
+        const minTile = compact ? CONFIG.result.compactMinTile : CONFIG.result.minTile;
+        const { maxTile, targetRatio, emptyWeight, overflowWeight } = CONFIG.result;
         const bodyStyle = getComputedStyle(body);
         const paddingX = parseFloat(bodyStyle.paddingLeft) + parseFloat(bodyStyle.paddingRight);
         const paddingY = parseFloat(bodyStyle.paddingTop) + parseFloat(bodyStyle.paddingBottom);
@@ -112,28 +116,50 @@ export class ResultPage {
         const availableWidth = body.clientWidth - paddingX;
         const availableHeight = window.innerHeight - (header?.offsetHeight ?? 0) - paddingY - 16;
 
-        // 接近正方，但不能少到一张牌都放不下：窄屏时减少列数而不是缩小卡片
-        const columns = Math.min(
-            Math.ceil(Math.sqrt(count)),
-            Math.max(1, Math.floor((availableWidth + gap) / (CONFIG.result.minTile + gap)))
-        );
-        const rows = Math.ceil(count / columns);
-
         // 名称行高度和间距从实际卡片读取，避免写死字号
         const firstItem = grid.querySelector<HTMLElement>('.fav-item');
         const name = firstItem?.querySelector<HTMLElement>('.fav-name');
         const firstTile = firstItem?.querySelector<HTMLElement>('.tile');
         const nameHeight = name?.offsetHeight ?? 17;
         const nameGap = name && firstTile ? name.offsetTop - firstTile.offsetTop - firstTile.offsetHeight : 5;
+        const nameRowHeight = nameHeight + nameGap;
 
-        const sizeByWidth = (availableWidth - gap * (columns - 1)) / columns;
-        const sizeByHeight = (availableHeight - gap * (rows - 1) - rows * (nameHeight + nameGap))
-            / (rows * TILE_ASPECT);
-        const size = Math.floor(Math.min(sizeByWidth, sizeByHeight));
-        const tileWidth = Math.max(CONFIG.result.minTile, Math.min(CONFIG.result.maxTile, size));
+        const maxCols = Math.max(1, Math.floor((availableWidth + gap) / (minTile + gap)));
+        const limit = Math.min(count, maxCols);
+        // 宽屏下只要排得下，就不选“竖长条”（例如 3 个排成 1×3）
+        const preferLandscape = maxCols * maxCols >= count;
+        let best: { cols: number; tile: number; empty: number; score: number } | null = null;
 
-        // 固定宽度，确保每行正好 columns 个，而不是被更宽的容器排成更多列
+        for (let cols = 1; cols <= limit; cols++) {
+            const rows = Math.ceil(count / cols);
+            const tileByWidth = (availableWidth - gap * (cols - 1)) / cols;
+            const tileByHeight = (availableHeight - gap * (rows - 1) - rows * nameRowHeight)
+                / (rows * TILE_ASPECT);
+            const tile = Math.max(minTile, Math.min(maxTile, tileByWidth, tileByHeight));
+
+            const blockWidth = cols * tile + gap * (cols - 1);
+            const blockHeight = rows * (tile * TILE_ASPECT + nameRowHeight) + gap * (rows - 1);
+            const empty = cols * rows - count;
+            const overflow = Math.max(0, blockHeight - availableHeight) / availableHeight;
+            const score = Math.abs(blockWidth / blockHeight - targetRatio)
+                + emptyWeight * (empty / count)
+                + overflowWeight * overflow
+                + (preferLandscape && cols < rows ? 10 : 0);
+
+            const better = !best
+                || score < best.score - 1e-9
+                || (Math.abs(score - best.score) < 1e-9
+                    && (empty < best.empty || (empty === best.empty && tile > best.tile)));
+            if (better) best = { cols, tile, empty, score };
+        }
+
+        if (!best) return;
+
+        const tileWidth = Math.floor(best.tile);
+        const blockWidth = Math.floor(best.cols * tileWidth + gap * (best.cols - 1));
+        // 间距与宽度共用同一来源，确保列数不会被 CSS 的 gap 挤成别的数目
+        grid.style.setProperty('--result-gap', `${gap}px`);
         grid.style.setProperty('--tile-width', `${tileWidth}px`);
-        grid.style.width = `${columns * tileWidth + gap * (columns - 1)}px`;
+        grid.style.width = `${blockWidth}px`;
     }
 }
