@@ -279,6 +279,28 @@ async function boot(): Promise<void> {
 
         startScreen.show();
         loading.hidden = true;
+
+        // 调试预览：?debug_preview=9 直接展示等距抽样的结果页，不创建 picker，也不读写存档
+        const previewCount = Math.floor(Number(new URLSearchParams(location.search).get('debug_preview')));
+        if (Number.isFinite(previewCount) && previewCount > 0) {
+            const { items: allItems } = buildScope(false);
+            const count = Math.min(previewCount, allItems.length);
+            if (count === 0) return;
+
+            const step = allItems.length / count;
+            const sample = Array.from({ length: count }, (_, index) => allItems[Math.floor(index * step)]);
+
+            const preview = new ResultPage({
+                screen: byId('resultScreen'),
+                pickerScreen: byId('startScreen'),
+                grid: byId('resultGrid'),
+                count: byId('resultCount'),
+                backBtn: byId<HTMLButtonElement>('backToPickerBtn')
+            }, () => startScreen.show(), '返回设置');
+
+            startScreen.hide();
+            preview.open(sample);
+        }
     } catch (err) {
         console.error(err);
         loading.hidden = true;

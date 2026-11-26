@@ -44,9 +44,9 @@ export const CONFIG: AppConfig = {
     maxRows: 3
   },
   result: {
-    maxTile: 240,
-    minTile: 72,
-    gap: 14
+    maxTile: 140,
+    minTile: 100,
+    gap: 20
   },
   defaultSettings: {
     minBatchSize: 2,

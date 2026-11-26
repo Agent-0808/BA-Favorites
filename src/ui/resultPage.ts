@@ -18,20 +18,26 @@ const TILE_ASPECT = 456 / 404;
  */
 export class ResultPage {
     private items: BaItem[] = [];
+    private isOpen = false;
 
     constructor(
         private readonly elements: ResultPageElements,
-        private readonly onBack: () => void
+        private readonly onBack: () => void,
+        backLabel = '返回排序'
     ) {
-        elements.backBtn.addEventListener('click', () => this.close());
+        elements.backBtn.textContent = backLabel;
+        elements.backBtn.addEventListener('click', () => {
+            if (this.isOpen) this.close();
+        });
         window.addEventListener('resize', () => {
-            if (!elements.screen.hidden) this.layout();
+            if (this.isOpen) this.layout();
         });
     }
 
     open(items: BaItem[]): void {
         if (items.length === 0) return;
         this.items = items;
+        this.isOpen = true;
         this.elements.pickerScreen.hidden = true;
         this.elements.screen.hidden = false;
         this.render();
@@ -40,6 +46,8 @@ export class ResultPage {
     }
 
     close(): void {
+        if (!this.isOpen) return;
+        this.isOpen = false;
         this.elements.screen.hidden = true;
         this.elements.pickerScreen.hidden = false;
         this.onBack();
