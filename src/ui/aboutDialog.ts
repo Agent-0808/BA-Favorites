@@ -41,6 +41,37 @@ const ABOUT_SECTIONS: AboutSection[] = [
                     '角色数据来自 ',
                     { label: 'BA-characters-internal-id', href: 'https://github.com/Agent-0808/BA-characters-internal-id' }
                 ]
+            },
+            {
+                kind: 'text',
+                parts: [
+                    '上游数据源及角色图片来自 ',
+                    { label: '基沃托斯古书馆', href: 'https://kivo.wiki' }
+                ]
+            }
+        ]
+    },
+    {
+        title: '使用的包',
+        blocks: [
+            { kind: 'link', link: { label: 'ba-click-fx', href: 'https://github.com/CialloKing/ba-click-fx' } },
+            { kind: 'link', link: { label: 'SortableJS', href: 'https://github.com/SortableJS/Sortable' } }
+        ]
+    },
+    {
+        title: '开源协议',
+        blocks: [
+            {
+                kind: 'text',
+                parts: [
+                    '本项目代码以 ',
+                    { label: 'MIT', href: 'https://opensource.org/license/mit' },
+                    ' 协议开源；角色数据以 ',
+                    { label: 'CC BY-SA 4.0', href: 'https://creativecommons.org/licenses/by-sa/4.0/' },
+                    ' 协议提供，与 ',
+                    { label: 'BA-characters-internal-id', href: 'https://github.com/Agent-0808/BA-characters-internal-id' },
+                    ' 项目保持一致。'
+                ]
             }
         ]
     },
