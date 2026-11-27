@@ -201,9 +201,7 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
 
   function refresh(): void {
     const filtered = items.filter(item => matchesBaScope(item, draft));
-    const students = filtered.filter(item => !item.isNpc).length;
-    const npcs = filtered.length - students;
-    itemCount.textContent = `当前将参与排序：${filtered.length} 项（学生 ${students} · NPC ${npcs}）`;
+    itemCount.textContent = String(filtered.length);
 
     const save = options.getSaveSummary(draft.splitSkins);
     currentSave = save;

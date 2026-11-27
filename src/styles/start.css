@@ -346,27 +346,9 @@
     border-top: 1px solid var(--color-border);
 }
 
-/* 顶栏的参与排序计数：数据加载前为空则不占位 */
-.start-count {
-    font-size: 13px;
-    color: var(--ba-navy);
-}
-
-.start-count:empty {
-    display: none;
-}
-
 .start-buttons {
     display: flex;
     gap: 10px;
-}
-
-/* ---------- 选择页范围摘要 ---------- */
-
-.scope-summary {
-    margin-right: auto;
-    font-size: 12px;
-    color: var(--color-text-muted);
 }
 
 @media (max-width: 600px) {

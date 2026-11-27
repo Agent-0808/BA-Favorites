@@ -173,12 +173,6 @@ function getBatchSize(currentSize: number, settings: BaSettings): number {
     return Math.max(minSize, size);
 }
 
-function scopeSummary(items: BaItem[], settings: BaSettings): string {
-    const filtered = items.filter(item => matchesBaScope(item, settings));
-    const students = filtered.filter(item => !item.isNpc).length;
-    return `当前范围：学生 ${students} · NPC ${filtered.length - students} · 共 ${filtered.length} 项`;
-}
-
 async function boot(): Promise<void> {
     const loading = byId('loading');
     const error = byId('error');
@@ -246,21 +240,15 @@ async function boot(): Promise<void> {
                 statEliminated: byId('statEliminated')
             }, resultPage);
 
-            function updateScopeSummary(): void {
-                byId('scopeSummary').textContent = scopeSummary(items, picker.getSettings());
-            }
-
             byId<HTMLButtonElement>('resetBtn').addEventListener('click', () => {
                 if (!confirm('确定要清空所有进度并重新开始吗？')) return;
                 picker.reset();
                 view.update();
-                updateScopeSummary();
             });
 
             // 配置集中在开始页，返回时利用存档重新进入配置流程
             byId<HTMLButtonElement>('backBtn').addEventListener('click', () => location.reload());
 
-            updateScopeSummary();
             startScreen.hide();
             byId('pickerScreen').hidden = false;
             // 初始渲染发生在选择页隐藏时，显示后重绘一次，让长名称按实际宽度缩小字号
