@@ -77,6 +77,10 @@ function initialSettings(splitSkins: boolean): BaSettings {
         splitSkins,
         includeStudents: saved.includeStudents ?? defaults.includeStudents,
         includeNpcs: saved.includeNpcs ?? defaults.includeNpcs,
+        includeNpcStudents: saved.includeNpcStudents ?? defaults.includeNpcStudents,
+        includeMobs: saved.includeMobs ?? defaults.includeMobs,
+        includeOthers: saved.includeOthers ?? defaults.includeOthers,
+        includeNameOnly: saved.includeNameOnly ?? defaults.includeNameOnly,
         studentSchools: [...(saved.studentSchools ?? defaults.studentSchools)],
         npcSchools: [...(saved.npcSchools ?? defaults.npcSchools)],
         serverScope: saved.serverScope ?? defaults.serverScope,
@@ -104,8 +108,12 @@ function describeSettings(settings: BaSettings): string {
         SERVER_SCOPE_LABELS[settings.serverScope],
         scope(settings.includeStudents, settings.studentSchools, '学生'),
         scope(settings.includeNpcs, settings.npcSchools, 'NPC'),
+        settings.includeNpcs && !settings.includeNpcStudents ? '不含NPC学生' : '',
+        settings.includeMobs ? '含杂鱼' : '',
+        settings.includeOthers ? '含其他' : '',
+        settings.includeNameOnly ? '含只有名字' : '',
         settings.fixedBatchSize ? `每批固定 ${cap} 张` : `每批上限 ${cap}`
-    ].join(' · ');
+    ].filter(Boolean).join(' · ');
 }
 
 /** 距今多久；超过一周直接显示日期。 */

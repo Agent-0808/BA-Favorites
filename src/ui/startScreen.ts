@@ -65,6 +65,10 @@ function settingsDiffer(draft: BaSettings, saved: BaSettings): boolean {
     draft.splitSkins !== saved.splitSkins ||
     draft.includeStudents !== saved.includeStudents ||
     draft.includeNpcs !== saved.includeNpcs ||
+    draft.includeNpcStudents !== saved.includeNpcStudents ||
+    draft.includeMobs !== saved.includeMobs ||
+    draft.includeOthers !== saved.includeOthers ||
+    draft.includeNameOnly !== saved.includeNameOnly ||
     draft.serverScope !== saved.serverScope ||
     !sameIds(draft.studentSchools, saved.studentSchools) ||
     !sameIds(draft.npcSchools, saved.npcSchools)
@@ -83,6 +87,11 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   const itemCount = byId('itemCount');
   const includeStudents = byId<HTMLInputElement>('includeStudents');
   const includeNpcs = byId<HTMLInputElement>('includeNpcs');
+  const includeNpcStudents = byId<HTMLInputElement>('includeNpcStudents');
+  const includeMobs = byId<HTMLInputElement>('includeMobs');
+  const includeOthers = byId<HTMLInputElement>('includeOthers');
+  const includeNameOnly = byId<HTMLInputElement>('includeNameOnly');
+  const npcSubToggles = byId('npcSubToggles');
   const clearStudentSchools = byId<HTMLButtonElement>('clearStudentSchools');
   const clearNpcSchools = byId<HTMLButtonElement>('clearNpcSchools');
   const studentSchoolsEl = byId('studentSchools');
@@ -131,6 +140,10 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
     splitSkins.checked = draft.splitSkins;
     includeStudents.checked = draft.includeStudents;
     includeNpcs.checked = draft.includeNpcs;
+    includeNpcStudents.checked = draft.includeNpcStudents;
+    includeMobs.checked = draft.includeMobs;
+    includeOthers.checked = draft.includeOthers;
+    includeNameOnly.checked = draft.includeNameOnly;
     for (const radio of serverRadios) {
       radio.checked = radio.value === draft.serverScope;
     }
@@ -200,6 +213,16 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   }
 
   function refresh(): void {
+    // 指定实装范围（非“不限”）时 NPC 必然全部被排除，禁用整栏选项
+    const scopeLimited = draft.serverScope !== 'all';
+    const npcEnabled = draft.includeNpcs && !scopeLimited;
+    includeNpcs.disabled = scopeLimited;
+    npcSubToggles.classList.toggle('is-disabled', !npcEnabled);
+    for (const input of [includeNpcStudents, includeMobs, includeOthers, includeNameOnly]) {
+      input.disabled = !npcEnabled;
+    }
+    npcSchoolsEl.classList.toggle('is-disabled', !npcEnabled);
+
     const filtered = items.filter(item => matchesBaScope(item, draft));
     itemCount.textContent = String(filtered.length);
 
@@ -266,6 +289,26 @@ export function createStartScreen(root: HTMLElement, options: StartScreenOptions
   includeNpcs.addEventListener('change', () => {
     draft.includeNpcs = includeNpcs.checked;
     rebuild();
+  });
+
+  includeNpcStudents.addEventListener('change', () => {
+    draft.includeNpcStudents = includeNpcStudents.checked;
+    refresh();
+  });
+
+  includeMobs.addEventListener('change', () => {
+    draft.includeMobs = includeMobs.checked;
+    refresh();
+  });
+
+  includeOthers.addEventListener('change', () => {
+    draft.includeOthers = includeOthers.checked;
+    refresh();
+  });
+
+  includeNameOnly.addEventListener('change', () => {
+    draft.includeNameOnly = includeNameOnly.checked;
+    refresh();
   });
 
   // 只清空学校勾选，不改动学生 / NPC 的总开关

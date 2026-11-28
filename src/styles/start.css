@@ -165,6 +165,20 @@
     color: var(--color-text-muted);
 }
 
+/* NPC 细分开关：杂鱼酱 / 其他角色，默认都关闭 */
+.sub-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+/* NPC 总开关关闭时，细分开关整体变淡 */
+.sub-toggles.is-disabled {
+    opacity: 0.4;
+}
+
 .school-chips {
     display: flex;
     flex-wrap: wrap;

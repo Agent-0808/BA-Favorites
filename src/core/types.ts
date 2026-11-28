@@ -54,6 +54,8 @@ export interface BaItem extends PickerItem {
   isInstallJp: boolean;
   isInstallGlobal: boolean;
   isNpc: boolean;
+  /** 角色分类：normal 常规、mob 杂鱼酱、other 机器人 / Boss 等、nameonly 只有名字。 */
+  tier: 'normal' | 'mob' | 'other' | 'nameonly';
   hasCostumes: boolean;
 }
 
@@ -66,6 +68,14 @@ export interface BaSettings extends PickerSettings {
   splitSkins: boolean;
   includeStudents: boolean;
   includeNpcs: boolean;
+  /** 是否包含常规 NPC学生（is_npc 为 true 且 tier 为 normal）。 */
+  includeNpcStudents: boolean;
+  /** 是否把 tier 为 mob 的杂鱼酱（路人学生）纳入候选池。 */
+  includeMobs: boolean;
+  /** 是否把 tier 为 other 的机器人 / Boss 等纳入候选池。 */
+  includeOthers: boolean;
+  /** 是否把 tier 为 nameonly 的“只有名字”角色纳入候选池。 */
+  includeNameOnly: boolean;
   /** 空数组表示包含该类别全部学校。 */
   studentSchools: number[];
   npcSchools: number[];

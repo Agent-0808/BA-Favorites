@@ -4,6 +4,7 @@ import type { BaItem, BaSettings } from '../core/types';
 export interface StudentPage {
   page_id: number;
   skin: string;
+  skin_cn?: string;
   avatar: string;
   is_install: boolean;
   is_install_cn: boolean;
@@ -17,8 +18,15 @@ export interface Student {
   id: number;
   family_name: string;
   given_name: string;
+  family_name_cn?: string;
+  given_name_cn?: string;
   school_id: number;
   is_npc: boolean;
+  /** 角色分类：normal 常规、mob 杂鱼酱、other 机器人 / Boss 等、nameonly 只有名字。 */
+  tier?: 'normal' | 'mob' | 'other' | 'nameonly';
+  age?: number | null;
+  height?: number | null;
+  body_shape?: string | null;
   pages: StudentPage[];
 }
 
@@ -119,6 +127,7 @@ function buildItem(
     schoolName: schoolNames.get(student.school_id) ?? `学校 ${student.school_id}`,
     ...flags,
     isNpc: Boolean(student.is_npc),
+    tier: student.tier ?? 'normal',
     hasCostumes
   };
 }
@@ -186,10 +195,17 @@ export function toSchoolGroups(items: BaItem[], schools: School[]): SchoolGroups
   return { students: toOptions(false), npcs: toOptions(true) };
 }
 
-/** 判断 item 是否落在当前角色范围内（学生/NPC 总开关、学校、实装范围）。 */
+/** 判断 item 是否落在当前角色范围内（路人、学生/NPC 总开关、学校、实装范围）。 */
 export function matchesBaScope(item: BaItem, settings: BaSettings): boolean {
+  // 杂鱼酱、机器人 / Boss、“只有名字”的角色默认隐藏，仅在显式开启后参与
+  if (item.tier === 'mob' && !settings.includeMobs) return false;
+  if (item.tier === 'other' && !settings.includeOthers) return false;
+  if (item.tier === 'nameonly' && !settings.includeNameOnly) return false;
+
   if (item.isNpc) {
     if (!settings.includeNpcs) return false;
+    // 常规 NPC学生 可单独关闭，杂鱼酱 / 其他 / 只有名字 由下面的分类开关控制
+    if (item.tier === 'normal' && !settings.includeNpcStudents) return false;
     const schoolIds = settings.npcSchools ?? [];
     if (schoolIds.length > 0 && !schoolIds.includes(item.schoolId)) return false;
   } else {

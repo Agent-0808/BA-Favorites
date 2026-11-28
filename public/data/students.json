@@ -15,6 +15,10 @@
     "given_name_cn": "未花",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 157,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 1,
@@ -85,6 +89,10 @@
     "given_name_cn": "桃",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 143,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 2,
@@ -177,6 +185,10 @@
     "given_name_cn": "梓",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 149,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 3,
@@ -271,6 +283,10 @@
     "given_name_cn": "心奈",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 11,
+    "height": 139,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 4,
@@ -335,6 +351,10 @@
     "given_name_cn": "宫子",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 156,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 6,
@@ -403,6 +423,10 @@
     "given_name_cn": "萌绘",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 163,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 7,
@@ -469,6 +493,10 @@
     "given_name_cn": "咲",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 161,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 8,
@@ -536,6 +564,10 @@
     "given_name_cn": "美游",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 149,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 9,
@@ -602,6 +634,10 @@
     "given_name_cn": "爱理",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 160,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 10,
@@ -670,6 +706,10 @@
     "given_name_cn": "若藻",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 18,
+    "height": 161,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 11,
@@ -741,6 +781,10 @@
     "given_name_cn": "",
     "school_id": 10,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 12,
@@ -783,6 +827,10 @@
     "given_name_cn": "",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 13,
@@ -824,6 +872,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 14,
@@ -865,6 +917,10 @@
     "given_name_cn": "",
     "school_id": 19,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 15,
@@ -906,6 +962,10 @@
     "given_name_cn": "联邦理事会长",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 17,
@@ -948,6 +1008,10 @@
     "given_name_cn": "濑名",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 155,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 18,
@@ -1015,6 +1079,10 @@
     "given_name_cn": "戈尔孔达&德卡考马尼",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 19,
@@ -1057,6 +1125,10 @@
     "given_name_cn": "千寻",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 160,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 20,
@@ -1144,6 +1216,10 @@
     "given_name_cn": "三森",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 156,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 22,
@@ -1211,6 +1287,10 @@
     "given_name_cn": "忧",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 23,
@@ -1276,6 +1356,10 @@
     "given_name_cn": "茜",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 164,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 24,
@@ -1365,6 +1449,10 @@
     "given_name_cn": "渚",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 160,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 25,
@@ -1432,6 +1520,10 @@
     "given_name_cn": "日向",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 166,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 26,
@@ -1498,6 +1590,10 @@
     "given_name_cn": "绿",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 143,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 27,
@@ -1587,6 +1683,10 @@
     "given_name_cn": "诺亚",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 161,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 28,
@@ -1655,6 +1755,10 @@
     "given_name_cn": "枫",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 142,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 29,
@@ -1722,6 +1826,10 @@
     "given_name_cn": "月咏",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 180,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 32,
@@ -1789,6 +1897,10 @@
     "given_name_cn": "美咲",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 163,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 33,
@@ -1854,6 +1966,10 @@
     "given_name_cn": "日和",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 155,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 34,
@@ -1921,6 +2037,10 @@
     "given_name_cn": "亚津子",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 158,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 35,
@@ -1990,6 +2110,10 @@
     "given_name_cn": "纱织",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 167,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 36,
@@ -2082,6 +2206,10 @@
     "given_name_cn": "和纱",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 155,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 37,
@@ -2151,6 +2279,10 @@
     "given_name_cn": "伊吕波",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 151,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 38,
@@ -2219,6 +2351,10 @@
     "given_name_cn": "亚子",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 39,
@@ -2287,6 +2423,10 @@
     "given_name_cn": "野宫",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 160,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 78,
@@ -2361,6 +2501,10 @@
     "given_name_cn": "星野",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 145,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 76,
@@ -2490,6 +2634,10 @@
     "given_name_cn": "圣娅",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 149,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 43,
@@ -2557,6 +2705,10 @@
     "given_name_cn": "芹香",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 153,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 83,
@@ -2657,6 +2809,10 @@
     "given_name_cn": "真里奈",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 166,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 45,
@@ -2725,6 +2881,10 @@
     "given_name_cn": "泉奈",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 155,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 180,
@@ -2814,6 +2974,10 @@
     "given_name_cn": "绫音",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 153,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 85,
@@ -2887,6 +3051,10 @@
     "given_name_cn": "千世",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 159,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 84,
@@ -2953,6 +3121,10 @@
     "given_name_cn": "风香",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 159,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 97,
@@ -3043,6 +3215,10 @@
     "given_name_cn": "静子",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 153,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 96,
@@ -3112,6 +3288,10 @@
     "given_name_cn": "响",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 154,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 69,
@@ -3177,6 +3357,10 @@
     "given_name_cn": "优香",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 156,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 52,
@@ -3271,6 +3455,10 @@
     "given_name_cn": "歌原",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 162,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 185,
@@ -3339,6 +3527,10 @@
     "given_name_cn": "玛丽",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 151,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 99,
@@ -3429,6 +3621,10 @@
     "given_name_cn": "琴里",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 151,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 211,
@@ -3497,6 +3693,10 @@
     "given_name_cn": "白子",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 156,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 86,
@@ -3595,6 +3795,10 @@
     "given_name_cn": "莲见",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 179,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 111,
@@ -3684,6 +3888,10 @@
     "given_name_cn": "妃咲",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 142,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 61,
@@ -3752,6 +3960,10 @@
     "given_name_cn": "日鞠",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 162,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 62,
@@ -3822,6 +4034,10 @@
     "given_name_cn": "吹雪",
     "school_id": 8,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 148,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 63,
@@ -3891,6 +4107,10 @@
     "given_name_cn": "雪乃",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 167,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 64,
@@ -3933,6 +4153,10 @@
     "given_name_cn": "妮可",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 160,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 65,
@@ -3977,6 +4201,10 @@
     "given_name_cn": "胡桃",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 151,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 66,
@@ -4021,6 +4249,10 @@
     "given_name_cn": "御伽",
     "school_id": 11,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 150,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 67,
@@ -4066,6 +4298,10 @@
     "given_name_cn": "未来",
     "school_id": 26,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 158,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 68,
@@ -4108,6 +4344,10 @@
     "given_name_cn": "日富美",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 158,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 74,
@@ -4200,6 +4440,10 @@
     "given_name_cn": "日奈",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 142,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 71,
@@ -4298,6 +4542,10 @@
     "given_name_cn": "伊织",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 157,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 72,
@@ -4365,6 +4613,10 @@
     "given_name_cn": "泉",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 161,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 73,
@@ -4455,6 +4707,10 @@
     "given_name_cn": "时",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 77,
@@ -4570,6 +4826,10 @@
     "given_name_cn": "真白",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 155,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 79,
@@ -4636,6 +4896,10 @@
     "given_name_cn": "柚子",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 150,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 81,
@@ -4728,6 +4992,10 @@
     "given_name_cn": "纱绫",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 149,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 88,
@@ -4794,6 +5062,10 @@
     "given_name_cn": "瞬",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": 174,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 90,
@@ -4884,6 +5156,10 @@
     "given_name_cn": "芹娜",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 156,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 91,
@@ -4950,6 +5226,10 @@
     "given_name_cn": "花子",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 161,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 92,
@@ -5020,6 +5300,10 @@
     "given_name_cn": "椿",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 162,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 93,
@@ -5088,6 +5372,10 @@
     "given_name_cn": "鹤城",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 162,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 94,
@@ -5156,6 +5444,10 @@
     "given_name_cn": "巴",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 165,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 95,
@@ -5223,6 +5515,10 @@
     "given_name_cn": "花江",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 150,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 98,
@@ -5289,6 +5585,10 @@
     "given_name_cn": "桐乃",
     "school_id": 8,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 161,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 100,
@@ -5357,6 +5657,10 @@
     "given_name_cn": "小雪",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 149,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 101,
@@ -5444,6 +5748,10 @@
     "given_name_cn": "爱露",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 160,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 112,
@@ -5534,6 +5842,10 @@
     "given_name_cn": "纯子",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 149,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 103,
@@ -5600,6 +5912,10 @@
     "given_name_cn": "阿洛娜",
     "school_id": 6,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": 138,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 104,
@@ -5642,6 +5958,10 @@
     "given_name_cn": "空",
     "school_id": 16,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 105,
@@ -5685,6 +6005,10 @@
     "given_name_cn": "时雨",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 156,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 106,
@@ -5752,6 +6076,10 @@
     "given_name_cn": "睦月",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 144,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 107,
@@ -5864,6 +6192,10 @@
     "given_name_cn": "爱丽丝",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": 152,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 108,
@@ -5959,6 +6291,10 @@
     "given_name_cn": "明里",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 167,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 110,
@@ -6030,6 +6366,10 @@
     "given_name_cn": "明日奈",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 167,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 113,
@@ -6124,6 +6464,10 @@
     "given_name_cn": "一花",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 163,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 114,
@@ -6190,6 +6534,10 @@
     "given_name_cn": "真琴",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 18,
+    "height": 169,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 115,
@@ -6280,6 +6628,10 @@
     "given_name_cn": "霞",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 148,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 116,
@@ -6346,6 +6698,10 @@
     "given_name_cn": "千夏",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 159,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 117,
@@ -6413,6 +6769,10 @@
     "given_name_cn": "好美",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 146,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 118,
@@ -6482,6 +6842,10 @@
     "given_name_cn": "和香",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 147,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 119,
@@ -6549,6 +6913,10 @@
     "given_name_cn": "佳代子",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 18,
+    "height": 157,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 176,
@@ -6639,6 +7007,10 @@
     "given_name_cn": "春香",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 157,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 192,
@@ -6750,6 +7122,10 @@
     "given_name_cn": "黑服",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 125,
@@ -6792,6 +7168,10 @@
     "given_name_cn": "尼娅",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 166,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 126,
@@ -6836,6 +7216,10 @@
     "given_name_cn": "海香",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 127,
@@ -6879,6 +7263,10 @@
     "given_name_cn": "瑠海",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 168,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 128,
@@ -6944,6 +7332,10 @@
     "given_name_cn": "美祢",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 168,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 129,
@@ -7010,6 +7402,10 @@
     "given_name_cn": "南",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 166,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 131,
@@ -7052,6 +7448,10 @@
     "given_name_cn": "莉音",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 171,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 133,
@@ -7121,6 +7521,10 @@
     "given_name_cn": "兰舞",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 161,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 134,
@@ -7186,6 +7590,10 @@
     "given_name_cn": "白子*恐怖",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 165,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 135,
@@ -7233,6 +7641,10 @@
     "given_name_cn": "伊吹",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 11,
+    "height": 128,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 136,
@@ -7322,6 +7734,10 @@
     "given_name_cn": "花凛",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 170,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 175,
@@ -7414,6 +7830,10 @@
     "given_name_cn": "妮露",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 146,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 213,
@@ -7506,6 +7926,10 @@
     "given_name_cn": "夏",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 152,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 139,
@@ -7575,6 +7999,10 @@
     "given_name_cn": "切里诺",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": 128,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 179,
@@ -7665,6 +8093,10 @@
     "given_name_cn": "玲纱",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 153,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 142,
@@ -7731,6 +8163,10 @@
     "given_name_cn": "果穗",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 173,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 143,
@@ -7774,6 +8210,10 @@
     "given_name_cn": "康娜",
     "school_id": 8,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 166,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 144,
@@ -7842,6 +8282,10 @@
     "given_name_cn": "晴奈",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 163,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 195,
@@ -7930,6 +8374,10 @@
     "given_name_cn": "回转者·黑",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 147,
@@ -7971,6 +8419,10 @@
     "given_name_cn": "回转者·绿",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 148,
@@ -8012,6 +8464,10 @@
     "given_name_cn": "回转者·粉",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 149,
@@ -8053,6 +8509,10 @@
     "given_name_cn": "回转者·红",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 150,
@@ -8094,6 +8554,10 @@
     "given_name_cn": "回转者·黄",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 151,
@@ -8135,6 +8599,10 @@
     "given_name_cn": "小春",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 148,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 157,
@@ -8202,6 +8670,10 @@
     "given_name_cn": "艾米",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 167,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 158,
@@ -8291,6 +8763,10 @@
     "given_name_cn": "绘梨香",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 166,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 159,
@@ -8334,6 +8810,10 @@
     "given_name_cn": "晴",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 153,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 160,
@@ -8421,6 +8901,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 162,
@@ -8471,6 +8955,10 @@
     "given_name_cn": "绮罗罗",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 159,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 163,
@@ -8515,6 +9003,10 @@
     "given_name_cn": "巨匠",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 164,
@@ -8557,6 +9049,10 @@
     "given_name_cn": "舞",
     "school_id": 13,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 165,
@@ -8598,6 +9094,10 @@
     "given_name_cn": "实梨",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 158,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 166,
@@ -8644,6 +9144,10 @@
     "given_name_cn": "红叶",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 135,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 167,
@@ -8687,6 +9191,10 @@
     "given_name_cn": "步",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 168,
@@ -8732,6 +9240,10 @@
     "given_name_cn": "花耶",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 169,
@@ -8775,6 +9287,10 @@
     "given_name_cn": "贝缇丽彩",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 170,
@@ -8816,6 +9332,10 @@
     "given_name_cn": "葵",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 171,
@@ -8860,6 +9380,10 @@
     "given_name_cn": "董事",
     "school_id": 19,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 201,
@@ -8923,6 +9447,10 @@
     "given_name_cn": "普拉娜",
     "school_id": 6,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 173,
@@ -8965,6 +9493,10 @@
     "given_name_cn": "葛叶",
     "school_id": 9,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 174,
@@ -9006,6 +9538,10 @@
     "given_name_cn": "铃美",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 162,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 181,
@@ -9073,6 +9609,10 @@
     "given_name_cn": "真纪",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 149,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 182,
@@ -9163,6 +9703,10 @@
     "given_name_cn": "凛",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 183,
@@ -9209,6 +9753,10 @@
     "given_name_cn": "桃可",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 184,
@@ -9255,6 +9803,10 @@
     "given_name_cn": "朱莉",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 170,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 186,
@@ -9322,6 +9874,10 @@
     "given_name_cn": "堇",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 167,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 187,
@@ -9389,6 +9945,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 188,
@@ -9430,6 +9990,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 189,
@@ -9471,6 +10035,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 190,
@@ -9512,6 +10080,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 191,
@@ -9553,6 +10125,10 @@
     "given_name_cn": "诗音",
     "school_id": 13,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 193,
@@ -9594,6 +10170,10 @@
     "given_name_cn": "志美子",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 157,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 194,
@@ -9658,6 +10238,10 @@
     "given_name_cn": "柴师傅",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 196,
@@ -9699,6 +10283,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 197,
@@ -9740,6 +10328,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 198,
@@ -9781,6 +10373,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 199,
@@ -9822,6 +10418,10 @@
     "given_name_cn": "",
     "school_id": 8,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 200,
@@ -9885,6 +10485,10 @@
     "given_name_cn": "",
     "school_id": 0,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 202,
@@ -9926,6 +10530,10 @@
     "given_name_cn": "樱子",
     "school_id": 2,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 160,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 203,
@@ -9995,6 +10603,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 204,
@@ -10036,6 +10648,10 @@
     "given_name_cn": "弗朗西斯",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 205,
@@ -10077,6 +10693,10 @@
     "given_name_cn": "",
     "school_id": 12,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 208,
@@ -10119,6 +10739,10 @@
     "given_name_cn": "",
     "school_id": 12,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 209,
@@ -10161,6 +10785,10 @@
     "given_name_cn": "小玉",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 158,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 212,
@@ -10250,6 +10878,10 @@
     "given_name_cn": "满",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 153,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 214,
@@ -10315,6 +10947,10 @@
     "given_name_cn": "菲娜",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 215,
@@ -10383,6 +11019,10 @@
     "given_name_cn": "皋月",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 172,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 216,
@@ -10450,6 +11090,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 217,
@@ -10491,6 +11135,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 218,
@@ -10532,6 +11180,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 219,
@@ -10573,6 +11225,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 220,
@@ -10614,6 +11270,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 221,
@@ -10655,6 +11315,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 222,
@@ -10696,6 +11360,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 223,
@@ -10737,6 +11405,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 224,
@@ -10778,6 +11450,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 225,
@@ -10819,6 +11495,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 226,
@@ -10860,6 +11540,10 @@
     "given_name_cn": "惠",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 164,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 229,
@@ -10924,6 +11608,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 231,
@@ -10965,6 +11653,10 @@
     "given_name_cn": "尤斯蒂娜圣徒",
     "school_id": 2,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 232,
@@ -11028,6 +11720,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 233,
@@ -11069,6 +11765,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 234,
@@ -11110,6 +11810,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 235,
@@ -11151,6 +11855,10 @@
     "given_name_cn": "",
     "school_id": 19,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 238,
@@ -11192,6 +11900,10 @@
     "given_name_cn": "将军",
     "school_id": 19,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 239,
@@ -11233,6 +11945,10 @@
     "given_name_cn": "总裁",
     "school_id": 19,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 240,
@@ -11274,6 +11990,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 241,
@@ -11315,6 +12035,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 242,
@@ -11356,6 +12080,10 @@
     "given_name_cn": "",
     "school_id": 4,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 244,
@@ -11397,6 +12125,10 @@
     "given_name_cn": "芭芭拉",
     "school_id": 2,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 245,
@@ -11438,6 +12170,10 @@
     "given_name_cn": "无名祭司",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 247,
@@ -11479,6 +12215,10 @@
     "given_name_cn": "",
     "school_id": 4,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 248,
@@ -11520,6 +12260,10 @@
     "given_name_cn": "笛卡尔",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 249,
@@ -11562,6 +12306,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 250,
@@ -11603,6 +12351,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 251,
@@ -11644,6 +12396,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 252,
@@ -11653,7 +12409,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E5%85%94%E5%A5%B3%E9%83%8E%E5%AD%A6%E7%94%9F-%E7%8B%99%E5%87%BB%E6%9E%AA/avatar.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E7%9A%84%E5%85%94%E5%A5%B3%E9%83%8EA/original/BunnyGirl_SR_spr_2.png",
         "spines": [
           1582
         ],
@@ -11685,6 +12441,10 @@
     "given_name_cn": "晶",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 253,
@@ -11748,6 +12508,10 @@
     "given_name_cn": "名草",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 161,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 254,
@@ -11820,6 +12584,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 255,
@@ -11861,6 +12629,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 256,
@@ -11902,6 +12674,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 257,
@@ -11943,6 +12719,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 258,
@@ -11984,6 +12764,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 259,
@@ -12025,6 +12809,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 260,
@@ -12066,6 +12854,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 261,
@@ -12107,6 +12899,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 262,
@@ -12148,6 +12944,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 263,
@@ -12189,6 +12989,10 @@
     "given_name_cn": "芽瑠",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 137,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 264,
@@ -12254,6 +13058,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 266,
@@ -12295,6 +13103,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 267,
@@ -12336,6 +13148,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 268,
@@ -12377,6 +13193,10 @@
     "given_name_cn": "海",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 270,
@@ -12419,6 +13239,10 @@
     "given_name_cn": "丽情",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 169,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 271,
@@ -12463,6 +13287,10 @@
     "given_name_cn": "弗雷纳帕提斯",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 272,
@@ -12504,6 +13332,10 @@
     "given_name_cn": "",
     "school_id": 0,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 273,
@@ -12545,6 +13377,10 @@
     "given_name_cn": "",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 274,
@@ -12586,6 +13422,10 @@
     "given_name_cn": "灰音",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 275,
@@ -12628,6 +13468,10 @@
     "given_name_cn": "李",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 276,
@@ -12670,6 +13514,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 281,
@@ -12711,6 +13559,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 282,
@@ -12752,6 +13604,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 284,
@@ -12793,6 +13649,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 285,
@@ -12834,6 +13694,10 @@
     "given_name_cn": "梦",
     "school_id": 1,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 288,
@@ -12876,6 +13740,10 @@
     "given_name_cn": "比纳",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 295,
@@ -12917,6 +13785,10 @@
     "given_name_cn": "切赛德",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 296,
@@ -12958,6 +13830,10 @@
     "given_name_cn": "霍德",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 297,
@@ -12999,6 +13875,10 @@
     "given_name_cn": "科特尔",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 298,
@@ -13038,6 +13918,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": false,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 304,
@@ -13077,6 +13961,10 @@
     "given_name_cn": "回转 FX Mk.0",
     "school_id": 17,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 305,
@@ -13118,6 +14006,10 @@
     "given_name_cn": "白&黑",
     "school_id": 22,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 306,
@@ -13159,6 +14051,10 @@
     "given_name_cn": "佩洛洛斯拉",
     "school_id": 23,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 307,
@@ -13200,6 +14096,10 @@
     "given_name_cn": "贵音",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 148,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 308,
@@ -13242,6 +14142,10 @@
     "given_name_cn": "八云",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 144,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 309,
@@ -13284,6 +14188,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 310,
@@ -13325,6 +14233,10 @@
     "given_name_cn": "",
     "school_id": 24,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 311,
@@ -13366,6 +14278,10 @@
     "given_name_cn": "",
     "school_id": 24,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 312,
@@ -13407,6 +14323,10 @@
     "given_name_cn": "",
     "school_id": 24,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 313,
@@ -13448,6 +14368,10 @@
     "given_name_cn": "",
     "school_id": 24,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 314,
@@ -13487,6 +14411,10 @@
     "given_name_cn": "美琴",
     "school_id": 26,
     "is_npc": false,
+    "tier": "normal",
+    "age": 14,
+    "height": 161,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 315,
@@ -13530,6 +14458,10 @@
     "given_name_cn": "操祈",
     "school_id": 26,
     "is_npc": false,
+    "tier": "normal",
+    "age": 14,
+    "height": 168,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 316,
@@ -13573,6 +14505,10 @@
     "given_name_cn": "泪子",
     "school_id": 26,
     "is_npc": false,
+    "tier": "normal",
+    "age": 12,
+    "height": 160,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 317,
@@ -13616,6 +14552,10 @@
     "given_name_cn": "紫",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 155,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 318,
@@ -13683,6 +14623,10 @@
     "given_name_cn": "莲华",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 157,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 319,
@@ -13749,6 +14693,10 @@
     "given_name_cn": "桔梗",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 160,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 320,
@@ -13814,6 +14762,10 @@
     "given_name_cn": "棕榈",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 321,
@@ -13856,6 +14808,10 @@
     "given_name_cn": "新",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 322,
@@ -13899,6 +14855,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 323,
@@ -13962,6 +14922,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 324,
@@ -14003,6 +14967,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 325,
@@ -14044,6 +15012,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 326,
@@ -14085,6 +15057,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 327,
@@ -14126,6 +15102,10 @@
     "given_name_cn": "希罗尼穆斯",
     "school_id": 27,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 328,
@@ -14167,6 +15147,10 @@
     "given_name_cn": "格兹",
     "school_id": 22,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 329,
@@ -14208,6 +15192,10 @@
     "given_name_cn": "格里高利",
     "school_id": 27,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 330,
@@ -14249,6 +15237,10 @@
     "given_name_cn": "雏芥子",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 331,
@@ -14291,6 +15283,10 @@
     "given_name_cn": "猫鬼黑影",
     "school_id": 28,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 333,
@@ -14332,6 +15328,10 @@
     "given_name_cn": "艾茵",
     "school_id": 21,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 335,
@@ -14374,6 +15374,10 @@
     "given_name_cn": "奥尔",
     "school_id": 21,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 336,
@@ -14416,6 +15420,10 @@
     "given_name_cn": "索芙",
     "school_id": 21,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 337,
@@ -14458,6 +15466,10 @@
     "given_name_cn": "格武拉",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 338,
@@ -14497,6 +15509,10 @@
     "given_name_cn": "色彩",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 339,
@@ -14536,6 +15552,10 @@
     "given_name_cn": "莱依",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 159,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 342,
@@ -14579,6 +15599,10 @@
     "given_name_cn": "千明",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 167,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 347,
@@ -14646,6 +15670,10 @@
     "given_name_cn": "地下室人",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 349,
@@ -14687,6 +15715,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 358,
@@ -14728,6 +15760,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 359,
@@ -14769,6 +15805,10 @@
     "given_name_cn": "",
     "school_id": 9,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 363,
@@ -14810,6 +15850,10 @@
     "given_name_cn": "赛特",
     "school_id": 29,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 364,
@@ -14849,6 +15893,10 @@
     "given_name_cn": "光",
     "school_id": 24,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 147,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 365,
@@ -14891,6 +15939,10 @@
     "given_name_cn": "望",
     "school_id": 24,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 147,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 366,
@@ -14934,6 +15986,10 @@
     "given_name_cn": "周防",
     "school_id": 24,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 367,
@@ -14977,6 +16033,10 @@
     "given_name_cn": "纺",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 162,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 372,
@@ -15020,6 +16080,10 @@
     "given_name_cn": "「雷帝」",
     "school_id": 3,
     "is_npc": true,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 374,
@@ -15059,6 +16123,10 @@
     "given_name_cn": "心华",
     "school_id": 8,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 165,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 378,
@@ -15101,6 +16169,10 @@
     "given_name_cn": "",
     "school_id": 1,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 380,
@@ -15142,6 +16214,10 @@
     "given_name_cn": "明美",
     "school_id": 17,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 385,
@@ -15183,6 +16259,10 @@
     "given_name_cn": "笑笑教授",
     "school_id": 17,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 386,
@@ -15224,6 +16304,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 387,
@@ -15265,6 +16349,10 @@
     "given_name_cn": "辉夜",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 390,
@@ -15308,6 +16396,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 392,
@@ -15349,6 +16441,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 393,
@@ -15390,6 +16486,10 @@
     "given_name_cn": "幻魉·付丧神",
     "school_id": 28,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 395,
@@ -15431,6 +16531,10 @@
     "given_name_cn": "无貌形代",
     "school_id": 28,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 396,
@@ -15472,6 +16576,10 @@
     "given_name_cn": "获刻玛",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 501,
@@ -15511,6 +16619,10 @@
     "given_name_cn": "玛尔扈特",
     "school_id": 21,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 502,
@@ -15555,6 +16667,10 @@
     "given_name_cn": "未来",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 515,
@@ -15596,6 +16712,10 @@
     "given_name_cn": "柯伊",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": 152,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 518,
@@ -15643,6 +16763,10 @@
     "given_name_cn": "",
     "school_id": 18,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 524,
@@ -15684,6 +16808,10 @@
     "given_name_cn": "青叶",
     "school_id": 24,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 151,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 525,
@@ -15727,6 +16855,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 526,
@@ -15768,6 +16900,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 527,
@@ -15809,6 +16945,10 @@
     "given_name_cn": "提翡瑞",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 528,
@@ -15848,6 +16988,10 @@
     "given_name_cn": "菖蒲",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 529,
@@ -15892,6 +17036,10 @@
     "given_name_cn": "蓟",
     "school_id": 9,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 530,
@@ -15955,6 +17103,10 @@
     "given_name_cn": "最强独角狮",
     "school_id": 28,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 532,
@@ -15996,6 +17148,10 @@
     "given_name_cn": "庚",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 144,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 548,
@@ -16038,6 +17194,10 @@
     "given_name_cn": "艾利",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 158,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 549,
@@ -16080,6 +17240,10 @@
     "given_name_cn": "",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 152,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 550,
@@ -16122,6 +17286,10 @@
     "given_name_cn": "",
     "school_id": 14,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 552,
@@ -16163,6 +17331,10 @@
     "given_name_cn": "",
     "school_id": 14,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 553,
@@ -16200,10 +17372,14 @@
     "given_name_en": "Miyo",
     "family_name_tw": "櫻井",
     "given_name_tw": "美代",
-    "family_name_cn": "",
-    "given_name_cn": "",
+    "family_name_cn": "樱井",
+    "given_name_cn": "美代",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 155,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 554,
@@ -16233,7 +17409,7 @@
   {
     "id": 555,
     "family_name": "云类鹫",
-    "given_name": "爱美",
+    "given_name": "学美",
     "family_name_jp": "雲類鷲",
     "given_name_jp": "マナミ",
     "family_name_kr": "우루와시",
@@ -16242,10 +17418,14 @@
     "given_name_en": "Manami",
     "family_name_tw": "雲類鷲",
     "given_name_tw": "真奈美",
-    "family_name_cn": "",
-    "given_name_cn": "",
+    "family_name_cn": "云类鹫",
+    "given_name_cn": "学美",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 163,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 555,
@@ -16255,17 +17435,20 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E4%BA%91%E7%B1%BB%E9%B9%AB%20%E7%88%B1%E7%BE%8E/original/avatar.png",
-        "spines": [],
-        "is_install": false,
+        "avatar": "//static.kivo.wiki/images/students/%E4%BA%91%E7%B1%BB%E9%B9%AB%20%E7%88%B1%E7%BE%8E/original/Student_Portrait_CH0339_Collection.png",
+        "spines": [
+          1925,
+          1929
+        ],
+        "is_install": true,
         "is_install_cn": false,
         "is_install_global": false,
-        "rarity": 0,
+        "rarity": 3,
         "limited": false,
-        "sd_model_image": "",
-        "recollection_lobby_image": "",
-        "game_id": 0,
-        "dev_name": ""
+        "sd_model_image": "//static.kivo.wiki/images/students/%E4%BA%91%E7%B1%BB%E9%B9%AB%20%E7%88%B1%E7%BE%8E/original/EnemyInfo_CH0339.png",
+        "recollection_lobby_image": "//static.kivo.wiki/images/students/%E4%BA%91%E7%B1%BB%E9%B9%AB%20%E7%88%B1%E7%BE%8E/original/cropped-1795607884429.jpg",
+        "game_id": 10154,
+        "dev_name": "CH0339"
       }
     ]
   },
@@ -16285,6 +17468,10 @@
     "given_name_cn": "",
     "school_id": 10,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 556,
@@ -16326,6 +17513,10 @@
     "given_name_cn": "",
     "school_id": 25,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 557,
@@ -16368,6 +17559,10 @@
     "given_name_cn": "",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 558,
@@ -16409,6 +17604,10 @@
     "given_name_cn": "",
     "school_id": 10,
     "is_npc": false,
+    "tier": "normal",
+    "age": 17,
+    "height": 166,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 559,
@@ -16450,10 +17649,14 @@
     "given_name_en": "Fuyu",
     "family_name_tw": "若狹",
     "given_name_tw": "冬",
-    "family_name_cn": "",
-    "given_name_cn": "",
+    "family_name_cn": "若狭",
+    "given_name_cn": "冬",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 173,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 560,
@@ -16496,6 +17699,10 @@
     "given_name_cn": "",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 140,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 561,
@@ -16538,6 +17745,10 @@
     "given_name_cn": "",
     "school_id": 14,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 562,
@@ -16579,6 +17790,10 @@
     "given_name_cn": "",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 564,
@@ -16618,6 +17833,10 @@
     "given_name_cn": "",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 578,
@@ -16659,6 +17878,10 @@
     "given_name_cn": "",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 581,
@@ -16700,6 +17923,10 @@
     "given_name_cn": "",
     "school_id": 21,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 582,
@@ -16739,6 +17966,10 @@
     "given_name_cn": "神名十文字",
     "school_id": 21,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 583,
@@ -16782,6 +18013,10 @@
     "given_name_cn": "",
     "school_id": 4,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 587,
@@ -16823,6 +18058,10 @@
     "given_name_cn": "",
     "school_id": 8,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 588,
@@ -16864,6 +18103,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": false,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 589,
@@ -16903,6 +18146,10 @@
     "given_name_cn": "",
     "school_id": 12,
     "is_npc": true,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 592,
@@ -16944,6 +18191,10 @@
     "given_name_cn": "",
     "school_id": 20,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 593,
@@ -16985,6 +18236,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 594,
@@ -17026,6 +18281,10 @@
     "given_name_cn": "",
     "school_id": 0,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 595,
@@ -17067,6 +18326,10 @@
     "given_name_cn": "",
     "school_id": 2,
     "is_npc": false,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 596,
@@ -17106,6 +18369,10 @@
     "given_name_cn": "",
     "school_id": 23,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 597,
@@ -17145,6 +18412,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 600,
@@ -17186,6 +18457,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 601,
@@ -17227,6 +18502,10 @@
     "given_name_cn": "",
     "school_id": 17,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 602,
@@ -17268,6 +18547,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 605,
@@ -17309,6 +18592,10 @@
     "given_name_cn": "",
     "school_id": 7,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 606,
@@ -17351,6 +18638,10 @@
     "given_name_cn": "谢玛塔",
     "school_id": 1,
     "is_npc": true,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 607,
@@ -17390,6 +18681,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 613,
@@ -17399,7 +18694,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%201/original/%E3%82%B9%E3%83%9F%E3%82%AB.png",
+        "avatar": "//static.kivo.wiki/images/students/%E5%B0%8F%E6%A3%AE%20%E5%A2%A8%E5%8D%8E/original/CH0383_spr_00_0.png",
         "spines": [
           1793
         ],
@@ -17431,6 +18726,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 614,
@@ -17440,7 +18739,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E4%B8%89%E5%8F%89%E6%88%9F%E9%83%A8%E5%91%98A/original/Trident.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E4%B8%89%E5%8F%89%E6%88%9F%E9%83%A8%E5%91%98A/original/NP0296_spr_Idle_01_1.8717665076255754.png",
         "spines": [
           1778
         ],
@@ -17472,6 +18771,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 615,
@@ -17481,7 +18784,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E6%B5%B7%E7%9B%97A/original/%E6%B5%B7%E7%9B%97A.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E6%B5%B7%E7%9B%97A/original/NP0297_spr_Idle_01_1.4851999999284746.png",
         "spines": [
           1779
         ],
@@ -17513,6 +18816,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 616,
@@ -17555,6 +18862,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 617,
@@ -17597,6 +18908,10 @@
     "given_name_cn": "",
     "school_id": 3,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 618,
@@ -17639,6 +18954,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 619,
@@ -17648,7 +18967,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E5%B0%8F%E7%99%BE%E5%90%88/original/sayuri.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E5%B0%8F%E7%99%BE%E5%90%88/original/CH0371_spr_Idle_01_1.2845999999999984.png",
         "spines": [
           1847
         ],
@@ -17680,6 +18999,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 165,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 620,
@@ -17722,6 +19045,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 171,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 621,
@@ -17764,6 +19091,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 622,
@@ -17773,7 +19104,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E7%8E%9B%E7%90%AA%E5%A8%9C/original/makina.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E7%8E%9B%E7%90%AA%E5%A8%9C/original/CH0370_spr_Idle_01_1.5013999999999927.png",
         "spines": [
           1846
         ],
@@ -17805,6 +19136,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 627,
@@ -17814,7 +19149,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E6%8A%A4%E5%AE%88%20%E4%B8%83%E6%B5%B7/original/Nanami.png",
+        "avatar": "//static.kivo.wiki/images/students/%E6%8A%A4%E5%AE%88%20%E4%B8%83%E6%B5%B7/original/CH0374_spr_Idle_01_1.2680000000000007.png",
         "spines": [
           1849
         ],
@@ -17846,6 +19181,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 628,
@@ -17855,7 +19194,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E6%B5%B7%E8%B7%AF%20%E5%87%91/original/Minato.png",
+        "avatar": "//static.kivo.wiki/images/students/%E6%B5%B7%E8%B7%AF%20%E5%87%91/original/CH0342_spr_Idle_01_1.2013000000000025.png",
         "spines": [
           1841
         ],
@@ -17887,6 +19226,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 629,
@@ -17896,7 +19239,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E7%81%AF%E4%B8%8B%20%E4%BA%9A%E7%BE%8E/original/Ami.png",
+        "avatar": "//static.kivo.wiki/images/students/%E7%81%AF%E4%B8%8B%20%E7%88%B1%E6%B5%B7/original/CH0343_spr_Idle_01_1.4682999999999866.png",
         "spines": [
           1842
         ],
@@ -17928,6 +19271,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 630,
@@ -17937,7 +19284,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E8%88%B9%E5%AE%88%20%E6%97%A9%E8%8B%97/original/Sanae.png",
+        "avatar": "//static.kivo.wiki/images/students/%E8%88%B9%E5%AE%88%20%E6%97%A9%E8%8B%97/original/CH0350_spr_Idle_01_2.3857000000000035.png",
         "spines": [
           1843
         ],
@@ -17969,6 +19316,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 631,
@@ -17978,7 +19329,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%E5%8D%83%E7%9F%B3%20%E7%BE%8E%E6%9C%88/original/Mitsuki.png",
+        "avatar": "//static.kivo.wiki/images/students/%E5%8D%83%E7%9F%B3%20%E4%B8%89%E6%9C%88/original/CH0372_spr_Idle_01_1.134300000000002.png",
         "spines": [
           1848
         ],
@@ -18010,6 +19361,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 632,
@@ -18019,7 +19374,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FA/original/OdesseyStuA.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FA/original/NP0259_spr_Idle_01_0.8709665076732618.png",
         "spines": [
           1850
         ],
@@ -18051,6 +19406,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 633,
@@ -18060,7 +19419,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FB/original/OdesseyStuB.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FB/original/NP0260_spr_Idle_01_1.1345999999046328.png",
         "spines": [
           1851
         ],
@@ -18092,6 +19451,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 634,
@@ -18101,7 +19464,7 @@
         "skin_en": "",
         "skin_tw": "",
         "skin_cn": "",
-        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FC/original/OdesseyStuC.png",
+        "avatar": "//static.kivo.wiki/images/students/%20%E5%A5%A5%E5%BE%B7%E8%B5%9B%E5%AD%A6%E7%94%9FC/original/NP0309_spr_Idle_01_1.2848000000715258.png",
         "spines": [
           1852
         ],
@@ -18133,6 +19496,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": false,
+    "tier": "nameonly",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 635,
@@ -18172,6 +19539,10 @@
     "given_name_cn": "",
     "school_id": 15,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": null,
     "pages": [
       {
         "page_id": 640,
@@ -18213,6 +19584,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 15,
+    "height": 165,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 641,
@@ -18255,6 +19630,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 12,
+    "height": 135,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 642,
@@ -18297,6 +19676,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": true,
+    "tier": "mob",
+    "age": null,
+    "height": null,
+    "body_shape": "Small",
     "pages": [
       {
         "page_id": 643,
@@ -18338,6 +19721,10 @@
     "given_name_cn": "",
     "school_id": 5,
     "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 165,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 644,
@@ -18380,6 +19767,10 @@
     "given_name_cn": "",
     "school_id": 23,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Medium",
     "pages": [
       {
         "page_id": 647,
@@ -18419,6 +19810,10 @@
     "given_name_cn": "气垫船",
     "school_id": 0,
     "is_npc": true,
+    "tier": "other",
+    "age": null,
+    "height": null,
+    "body_shape": "Large",
     "pages": [
       {
         "page_id": 648,
@@ -18441,6 +19836,187 @@
         "recollection_lobby_image": "",
         "game_id": 0,
         "dev_name": ""
+      }
+    ]
+  },
+  {
+    "id": 649,
+    "family_name": "云林院",
+    "given_name": "丽",
+    "family_name_jp": "雲林院",
+    "given_name_jp": "ウララ",
+    "family_name_kr": "운린인",
+    "given_name_kr": "우라라",
+    "family_name_en": "Unrinin",
+    "given_name_en": "Urara",
+    "family_name_tw": "",
+    "given_name_tw": "",
+    "family_name_cn": "",
+    "given_name_cn": "",
+    "school_id": 14,
+    "is_npc": false,
+    "tier": "normal",
+    "age": 16,
+    "height": 158,
+    "body_shape": "Medium",
+    "pages": [
+      {
+        "page_id": 649,
+        "skin": "",
+        "skin_jp": "",
+        "skin_kr": "",
+        "skin_en": "",
+        "skin_tw": "",
+        "skin_cn": "",
+        "avatar": "//static.kivo.wiki/images/students/%E4%BA%91%E6%9E%97%E9%99%A2%20%E4%B8%BD/original/Student_Portrait_CH0340_Collection.png",
+        "spines": [
+          1926,
+          1928
+        ],
+        "is_install": true,
+        "is_install_cn": false,
+        "is_install_global": false,
+        "rarity": 3,
+        "limited": false,
+        "sd_model_image": "//static.kivo.wiki/images/students/%E4%BA%91%E6%9E%97%E9%99%A2%20%E4%B8%BD/original/EnemyInfo_CH0340.png",
+        "recollection_lobby_image": "//static.kivo.wiki/images/students/%E4%BA%91%E6%9E%97%E9%99%A2%20%E4%B8%BD/original/CH0340_home.jpg",
+        "game_id": 20064,
+        "dev_name": "CH0340"
+      }
+    ]
+  },
+  {
+    "id": 650,
+    "family_name": "久远寺",
+    "given_name": "卡农",
+    "family_name_jp": "久遠寺",
+    "given_name_jp": "カノン",
+    "family_name_kr": "쿠온지",
+    "given_name_kr": "카논",
+    "family_name_en": "",
+    "given_name_en": "",
+    "family_name_tw": "",
+    "given_name_tw": "",
+    "family_name_cn": "",
+    "given_name_cn": "",
+    "school_id": 14,
+    "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": null,
+    "pages": [
+      {
+        "page_id": 650,
+        "skin": "",
+        "skin_jp": "",
+        "skin_kr": "",
+        "skin_en": "",
+        "skin_tw": "",
+        "skin_cn": "",
+        "avatar": "//static.kivo.wiki/images/students/%E4%B9%85%E8%BF%9C%E5%AF%BA%20%E5%8D%A1%E5%86%9C/original/CH0341_spr_Idle_01_1.9023999999999026.png",
+        "spines": [
+          1927
+        ],
+        "is_install": false,
+        "is_install_cn": false,
+        "is_install_global": false,
+        "rarity": 0,
+        "limited": false,
+        "sd_model_image": "",
+        "recollection_lobby_image": "",
+        "game_id": 0,
+        "dev_name": "CH0341"
+      }
+    ]
+  },
+  {
+    "id": 651,
+    "family_name": "小城",
+    "given_name": "小夜",
+    "family_name_jp": "小城",
+    "given_name_jp": "サヨ",
+    "family_name_kr": "코지로",
+    "given_name_kr": "사요",
+    "family_name_en": "",
+    "given_name_en": "",
+    "family_name_tw": "",
+    "given_name_tw": "",
+    "family_name_cn": "",
+    "given_name_cn": "",
+    "school_id": 14,
+    "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": null,
+    "pages": [
+      {
+        "page_id": 651,
+        "skin": "",
+        "skin_jp": "",
+        "skin_kr": "",
+        "skin_en": "",
+        "skin_tw": "",
+        "skin_cn": "",
+        "avatar": "//static.kivo.wiki/images/students/%E5%B0%8F%E5%9F%8E%20%E5%B0%8F%E5%A4%9C/original/CH0315_spr_Idle_01_1.8470665077209247.png",
+        "spines": [
+          1923
+        ],
+        "is_install": false,
+        "is_install_cn": false,
+        "is_install_global": false,
+        "rarity": 0,
+        "limited": false,
+        "sd_model_image": "",
+        "recollection_lobby_image": "",
+        "game_id": 0,
+        "dev_name": "CH0315"
+      }
+    ]
+  },
+  {
+    "id": 652,
+    "family_name": "初田",
+    "given_name": "飞鸟",
+    "family_name_jp": "初田",
+    "given_name_jp": "アスカ",
+    "family_name_kr": "핫타",
+    "given_name_kr": "아스카",
+    "family_name_en": "",
+    "given_name_en": "",
+    "family_name_tw": "",
+    "given_name_tw": "",
+    "family_name_cn": "",
+    "given_name_cn": "",
+    "school_id": 24,
+    "is_npc": false,
+    "tier": "normal",
+    "age": null,
+    "height": null,
+    "body_shape": null,
+    "pages": [
+      {
+        "page_id": 652,
+        "skin": "",
+        "skin_jp": "",
+        "skin_kr": "",
+        "skin_en": "",
+        "skin_tw": "",
+        "skin_cn": "",
+        "avatar": "//static.kivo.wiki/images/students/%E5%88%9D%E7%94%B0%20%E9%A3%9E%E9%B8%9F/original/asuka.png",
+        "spines": [
+          1924
+        ],
+        "is_install": false,
+        "is_install_cn": false,
+        "is_install_global": false,
+        "rarity": 0,
+        "limited": false,
+        "sd_model_image": "//static.kivo.wiki/images/students/%20%E6%8B%9C%E9%87%91%E6%8E%AE%E5%AE%A2/original/EnemyInfo_CH0338_Enemy.png",
+        "recollection_lobby_image": "",
+        "game_id": 0,
+        "dev_name": "CH0338"
       }
     ]
   }
